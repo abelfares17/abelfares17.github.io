@@ -1,0 +1,85 @@
+/* Untitled-1.css */
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Title Box Styling */
+
+.title-box {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 30px;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.title-box h1 {
+    font-size: 2.5em;
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Links Styling */
+.links {
+    margin-top: 80px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.links a {
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #333;
+    color: #fff;
+}
