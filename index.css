@@ -1,32 +1,36 @@
-body {
-    font-family: Arial, sans-serif;
+/* Resetting some default browser styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
+body {
+    font-family: Arial, sans-serif;
 }
 
-header h1 {
-    margin: 0;
-    text-align: center;
+/* Navbar Styling */
+.navbar {
+    background-color: #333; /* Dark background color for the menu */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
 }
 
-main {
-    padding: 1em;
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Spacing between buttons */
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.navbar li a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: #555; /* Lighter color on hover */
+    border-radius: 5px;
 }
