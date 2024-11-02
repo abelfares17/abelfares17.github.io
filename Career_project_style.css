@@ -7,13 +7,20 @@
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
+    background: linear-gradient(
+        to right,
+        #356859,   /* Dark green */
+        #5b8b6f,   /* Medium green */
+        #8ab17d,   /* Lighter green */
+        #b7d7a8,   /* Lightest green */
+        #ffffff    /* White */
+    );
+    min-height: 100vh;
+    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    line-height: 1.6;
 }
+
 
 /* Header styles */
 header {

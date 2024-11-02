@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #d8f3dc 50%, #ffffff 50%); /* Pale green to white */
+    background: linear-gradient(135deg, #5b8b6f 50%, #ffffff 50%); /* Pale green to white */
 }
 
 
