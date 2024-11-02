@@ -14,7 +14,6 @@ body {
     background: linear-gradient(135deg, #5b8b6f 50%, #ffffff 50%); /* Pale green to white */
 }
 
-
 /* Navbar Styling */
 .navbar {
     background-color: #333;
@@ -70,6 +69,10 @@ main {
 
 .welcome-box p {
     font-size: 1.2em;
+}
+.welcome-box a {
+    font-size: 1.7em;
+    color : #000;
 }
 
 /* Centering the image container */
