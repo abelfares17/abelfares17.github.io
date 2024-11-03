@@ -7,6 +7,19 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "JT Douro Serif Black";
+    src: url("fonts/JTDouro-Serif-Regular.woff2") format("woff2"),
+         url("fonts/JTDouro-Serif-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "JT Douro Serif Black", serif;
+}
+
+
 body {
     background: linear-gradient(
         to right,
@@ -36,6 +49,29 @@ main {
     text-align: center;
 }
 
+/* Home button styling */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2em;
+}
+
+.home-button a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.home-button a i {
+    margin-right: 8px; /* Adds space between icon and text */
+}
+
+.home-button a:hover {
+    color: #007bff; /* Changes color on hover */
+}
+
 /* Title Box Styling */
 
 .title-box {
@@ -46,6 +82,7 @@ main {
     width: 60%;
     max-width: 600px;
     border-radius: 8px;
+    margin-top: 20px;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -106,15 +143,17 @@ footer {
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .sub-title-box h1 {
     font-size: 1.9em;
 }
 
-/* Video Styling */
+/* Video Styling 
 video {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
 }
+*/

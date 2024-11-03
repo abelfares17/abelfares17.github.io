@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "JT Douro Serif Black";
+    src: url("fonts/JTDouro-Serif-Regular.woff2") format("woff2"),
+         url("fonts/JTDouro-Serif-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "JT Douro Serif Black", serif;
+}
+body {
+    color : #5b8b6f;
+    align-items: center;
+}
+
+/* Home button styling */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2em;
+}
+
+.home-button a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.home-button a i {
+    margin-right: 8px; /* Adds space between icon and text */
+}
+
+.home-button a:hover {
+    color: #007bff; /* Changes color on hover */
+}
+
+/* Style for the page title */
+.page-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.page-title h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Style for each activity section */
+.activities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activity {
+    width: 80%; /* Adjust width as needed */
+    height: 300px; /* Set a height for each activity section */
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: white; /* White text to stand out on background images */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Title and description styling */
+.activity h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.activity p {
+    font-size: 1em;
+    margin-top: 10px;
+    max-width: 60%; /* Limit width for readability */
+}
+
+.activitybis {
+    width: 80%; /* Adjust width as needed */
+    height: 600px; /* Set a height for each activity section */
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: white; /* White text to stand out on background images */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Title and description styling */
+.activitybis h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.activitybis p {
+    font-size: 1em;
+    margin-top: 10px;
+    max-width: 60%; /* Limit width for readability */
+}

@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "JT Douro Serif Black";
+    src: url("fonts/JTDouro-Serif-Regular.woff2") format("woff2"),
+         url("fonts/JTDouro-Serif-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 p {
+    font-family: "JT Douro Serif Black", serif;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -53,7 +65,7 @@ main {
 /* Welcome Box Styling */
 .welcome-box {
     background-color: #fff;
-    color: #000;
+    color : #5b8b6f;
     text-align: center;
     padding: 30px;
     width: 60%;
@@ -69,10 +81,11 @@ main {
 
 .welcome-box p {
     font-size: 1.2em;
+    margin-bottom: 10px;
 }
 .welcome-box a {
     font-size: 1.7em;
-    color : #000;
+    color : #5b8b6f;
 }
 
 /* Centering the image container */
@@ -93,7 +106,7 @@ main {
 /* Info Box Styling */
 .info-box {
     background-color: #fff;
-    color: #000;
+    color : #5b8b6f;
     text-align: center;
     padding: 20px;
     width: 60%;
@@ -122,4 +135,24 @@ main {
 .links a:hover {
     background-color: #333;
     color: #fff;
+}
+
+/* Warning band styling */
+.warning-band {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f6d7; /* Light red color for warning */
+    color: #969219; /* Dark red text for better readability */
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 1em;
+    border-top: 2px solid #f5f4c6; /* Optional border for emphasis */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.warning-band p {
+    margin: 0;
 }
