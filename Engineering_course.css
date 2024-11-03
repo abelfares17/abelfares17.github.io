@@ -1,0 +1,201 @@
+/* Resetting some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "JT Douro Serif Black";
+    src: url("fonts/JTDouro-Serif-Regular.woff2") format("woff2"),
+         url("fonts/JTDouro-Serif-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 p {
+    font-family: "JT Douro Serif Black", serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.page-title {
+    text-align: center;
+    margin: 20px 0; /* Space above and below the title */
+}
+/* Section styling */
+.semester-section {
+    text-align: center; /* Centers the title text */
+    padding: 20px; /* Adds padding around the section */
+    margin: 20px 0; /* Adds space above and below the section */
+    background-color: #ffffff; /* Optional: light background color for the section */
+    border-radius: 8px; /* Optional: rounds the corners of the section */
+}
+
+/* Title styling */
+.semester-section h2 {
+    font-size: 2em; /* Adjusts the title font size */
+    font-weight: bold; /* Makes the title bold */
+    color: #333; /* Title color */
+}
+/* List styling within semester section */
+.class-list {
+    list-style-type: none; /* Optional: keep bullet points */
+    padding: 0;
+    margin: 20px auto; /* Center the list horizontally */
+    max-width: 400px; /* Limits the list width and helps with centering */
+    text-align: center; /* Center-aligns the content of the list */
+}
+
+
+/* List item styling */
+.class-list li {
+    font-size: 1.2em; /* Adjusts font size */
+    line-height: 1.6; /* Adds spacing between items */
+    margin-bottom: 10px; /* Space between each item */
+}
+
+/* Soft Skills section styling */
+.soft-skills-section {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #ffffff; /* Optional: Light background color */
+    border-radius: 8px;
+}
+
+/* Soft Skills title styling */
+.soft-skills-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Skills list styling */
+.skills-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0 auto; /* Center the list horizontally */
+    max-width: 400px; /* Optional: limits the list width */
+    text-align: left; /* Left-aligns text within each list item */
+}
+
+/* Optional styling to adjust spacing and alignment */
+.skills-list li {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Align icon with text */
+    justify-content: center; /* Center-align each list item */
+}
+
+
+/* Icon styling */
+.skills-list li i {
+    color: #2b7a78; /* Optional: Customize icon color */
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.4em; /* Adjust icon size */
+}
+
+.tech-section {
+    text-align: center; /* Centers the title text */
+    padding: 20px; /* Adds padding around the section */
+    margin: 20px 0; /* Adds space above and below the section */
+    background-color: #ffffff; /* Optional: light background color for the section */
+    border-radius: 8px; /* Optional: rounds the corners of the section */
+}
+/* Title styling */
+.tech-section h2 {
+    font-size: 2em; /* Adjusts the title font size */
+    font-weight: bold; /* Makes the title bold */
+    color: #333; /* Title color */
+}
+/* List styling within semester section */
+.tech-skill-list {
+    list-style-type: none; /* Optional: keep bullet points */
+    padding: 0;
+    margin: 20px auto; /* Center the list horizontally */
+    max-width: 400px; /* Limits the list width and helps with centering */
+    text-align: center; /* Center-aligns the content of the list */
+}
+
+
+/* List item styling */
+.tech-skill-list li {
+    font-size: 1.2em; /* Adjusts font size */
+    line-height: 1.6; /* Adds spacing between items */
+    margin-bottom: 10px; /* Space between each item */
+}
+
+/* Wrapper for sections with side bands */
+.banded-section {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px; /* Space between section and side bands */
+    background-color: #5b8b6f; /* Light green background for the bands */
+}
+
+/* Inner section styling */
+.banded-section > section {
+    max-width: 800px; /* Controls width of the section content */
+    width: 100%; /* Ensures section content fills available space */
+    padding: 20px;
+    background-color: #f7f7f7; /* Background color for readability */
+    border-radius: 8px; /* Optional rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for emphasis */
+}
+
+.language-section {
+    text-align: center; /* Centers the title text */
+    padding: 20px; /* Adds padding around the section */
+    margin: 20px 0; /* Adds space above and below the section */
+    background-color: #ffffff; /* Optional: light background color for the section */
+    border-radius: 8px; /* Optional: rounds the corners of the section */
+}
+/* Title styling */
+.language-section h2 {
+    font-size: 2em; /* Adjusts the title font size */
+    font-weight: bold; /* Makes the title bold */
+    color: #333; /* Title color */
+}
+/* List styling within semester section */
+.language-list {
+    list-style-type: none; /* Optional: keep bullet points */
+    padding: 0;
+    margin: 20px auto; /* Center the list horizontally */
+    max-width: 400px; /* Limits the list width and helps with centering */
+    text-align: center; /* Center-aligns the content of the list */
+}
+
+
+/* List item styling */
+.language-list li {
+    font-size: 1.2em; /* Adjusts font size */
+    line-height: 1.6; /* Adds spacing between items */
+    margin-bottom: 10px; /* Space between each item */
+}

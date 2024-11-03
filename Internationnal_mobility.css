@@ -10,12 +10,31 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "JT Douro Serif Black", serif;
 }
 
-/* Home button styling */
-.home-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 1.2em;
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: #555;
+    border-radius: 5px;
 }
 
 /* Center the title */
@@ -50,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Text item styling */
 .text-item {
+    background: linear-gradient(135deg, #4348a3 20%, #ffffff 80%);
     font-size: 1.2em;
     padding: 15px; /* Space inside the text box */
     display: flex;
@@ -58,6 +78,38 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center; /* Center text */
 }
 .text-item p {
+    width: 70%;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text */
+    margin : 0 auto;
+}
+
+.text-item2 {
+    background: linear-gradient(45deg, #1a7531 20%, #ffffff 80%);
+    font-size: 1.2em;
+    padding: 15px; /* Space inside the text box */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text */
+}
+.text-item2 p {
+    width: 70%;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text */
+    margin : 0 auto;
+}
+
+.text-item3 {
+    background: linear-gradient(135deg, #ffffff 20%, #afac0e 80%);
+    font-size: 1.2em;
+    padding: 15px; /* Space inside the text box */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text */
+}
+.text-item3 p {
     width: 70%;
     justify-content: center; /* Center content vertically */
     text-align: center; /* Center text */

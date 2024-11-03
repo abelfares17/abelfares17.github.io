@@ -21,26 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 body {
-    background: linear-gradient(
-        to right,
-        #356859,   /* Dark green */
-        #5b8b6f,   /* Medium green */
-        #8ab17d,   /* Lighter green */
-        #b7d7a8,   /* Lightest green */
-        #ffffff    /* White */
-    );
-    min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-
-/* Header styles */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    background: linear-gradient( to right, #356859, #8ab17d, #ffffff)
 }
 
 /* Main content styles */
@@ -49,50 +30,36 @@ main {
     text-align: center;
 }
 
-/* Home button styling */
-.home-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 1.2em;
-}
-
-.home-button a {
-    text-decoration: none;
-    color: #333;
-    display: flex;
-    align-items: center;
-}
-
-.home-button a i {
-    margin-right: 8px; /* Adds space between icon and text */
-}
-
-.home-button a:hover {
-    color: #007bff; /* Changes color on hover */
-}
-
-/* Title Box Styling */
-
-.title-box {
-    background-color: #fff;
-    color: #000;
-    text-align: center;
-    padding: 30px;
-    width: 60%;
-    max-width: 600px;
-    border-radius: 8px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
+    padding: 10px 0;
+    width: 100%;
 }
 
-.title-box h1 {
-    font-size: 2.5em;
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.page-title {
+    text-align: center;
+    margin: 20px 0; /* Space above and below the title */
 }
 
 /* Footer styles */

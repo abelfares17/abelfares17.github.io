@@ -15,27 +15,31 @@ body {
     align-items: center;
 }
 
-/* Home button styling */
-.home-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 1.2em;
-}
-
-.home-button a {
-    text-decoration: none;
-    color: #333;
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
 }
 
-.home-button a i {
-    margin-right: 8px; /* Adds space between icon and text */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
 }
 
-.home-button a:hover {
-    color: #007bff; /* Changes color on hover */
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: #555;
+    border-radius: 5px;
 }
 
 /* Style for the page title */
