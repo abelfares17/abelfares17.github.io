@@ -44,10 +44,27 @@ h1, h2, h3, h4, h5, h6 p {
     border-radius: 5px;
 }
 
-.page-title {
-    text-align: center;
-    margin: 20px 0; /* Space above and below the title */
+
+/* Container for title image with colored borders */
+.title-container {
+    display: flex;
+    justify-content: center; /* Centers the image within the container */
+    padding: 20px; /* Controls the border thickness */
+    background-color: #5cb787; /* Border color - replace with your chosen color */
+    margin: 20px auto; /* Centers the container on the page */
+    max-width: 80%; /* Controls the width of the entire container */
+    box-sizing: border-box;
+    border-radius: 8px; /* Optional: rounded corners */
 }
+
+/* Title image styling */
+.title-image {
+    width: 100%; /* Image will take up the width of the container */
+    max-width: 600px; /* Limits the image width within the container */
+    height: auto; /* Maintains image aspect ratio */
+    display: block; /* Removes extra space under image */
+}
+
 /* Section styling */
 .semester-section {
     text-align: center; /* Centers the title text */
