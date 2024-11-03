@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "JT Douro Serif Black";
+    src: url("fonts/JTDouro-Serif-Regular.woff2") format("woff2"),
+         url("fonts/JTDouro-Serif-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "JT Douro Serif Black", serif;
+}
+
+/* Home button styling */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2em;
+}
+
+/* Center the title */
+.page-title {
+    text-align: center;
+    margin: 20px 0; /* Space above and below the title */
+}
+
+/* Grid container styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: repeat(3, 1fr); /* Three rows */
+    gap: 20px; /* Space between grid items */
+    width: 100%;
+    padding: 20px; /* Padding around the grid */
+}
+
+/* Individual grid item styling */
+.grid-item {
+    border: 2px solid #ccc; /* Optional: border around each item */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevents content from overflowing */
+}
+
+/* Image item background styling */
+.image-item {
+    background-size: cover; /* Ensures background image covers the area */
+    background-position: center; /* Centers the background image */
+    height: 400px; /* Set a fixed height for the image areas */
+}
+
+/* Text item styling */
+.text-item {
+    font-size: 1.2em;
+    padding: 15px; /* Space inside the text box */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text */
+}
+.text-item p {
+    width: 70%;
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text */
+    margin : 0 auto;
+}
