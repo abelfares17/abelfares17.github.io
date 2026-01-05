@@ -4,50 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eportfolio | Abel Fares</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap">
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Welcome</a></li>
-            <li><a href="Engineering_course.html">Engineering course</a></li>
-            <li><a href="Internationnal_mobility.html">International Mobility</a></li>
-            <li><a href="Sustainability_&_Civic Engagement.html">Sustainability & Civic Engagement</a></li>
-            <li><a href="Sports_activities.html">Sport & other activities</a></li>
-            <li><a href="Career_project.html" >Career Project</a></li>
+<body class="min-h-screen flex flex-col bg-cream text-ink font-sans">
+    <nav class="w-full bg-ink">
+        <ul class="max-w-6xl mx-auto px-6 py-3 grid grid-cols-6 gap-2 text-center text-sm font-sans text-paper">
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="#">Welcome</a>
+            </li>
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Engineering_course.html">Engineering course</a>
+            </li>
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Internationnal_mobility.html">International Mobility</a>
+            </li>
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Sustainability_&_Civic Engagement.html">Sustainability & Civic Engagement</a>
+            </li>
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Sports_activities.html">Sport & other activities</a>
+            </li>
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Career_project.html">Career Project</a>
+            </li>
         </ul>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Welcome Text Box -->
-        <div class="welcome-box">
-            <h1>Hello</h1>
-            <p>Welcome to my e-portfolio, my name is Abel Fares and I am an Engineering Student at : </p>
-            <a href="https://www.enseeiht.fr/fr/index.html/" target="_blank">ENSEEIHT</a>
-        </div>
+    <main class="w-full flex-1">
+        <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col items-center">
+            <section class="w-full max-w-3xl px-8 py-8 text-center bg-paper rounded-xl shadow-soft">
+                <h1 class="text-4xl font-display text-ink">Hello</h1>
+                <p class="mt-3 text-lg font-sans text-slate">Welcome to my e-portfolio, my name is Abel Fares and I am an Engineering Student at :</p>
+                <a class="mt-2 inline-block text-2xl font-display text-moss" href="https://www.enseeiht.fr/fr/index.html/" target="_blank" rel="noopener noreferrer">ENSEEIHT</a>
+            </section>
 
-        <!-- Circle for Image Placeholder -->
-        <div class="image-container">
-            <img src="ressources/Mon_image.jpg" alt="Profile Picture">
-        </div>
-        
-        <!-- Additional Text Box -->
-        <div class="info-box">
-            <p>Here you can find information about my academic journey, projects, and experiences.</p>
-        </div>
+            <div class="mt-8 flex justify-center">
+                <img class="w-48 h-48 rounded-full object-cover shadow-soft" src="ressources/Mon_image.jpg" alt="Profile Picture">
+            </div>
 
-        <!-- Links Section -->
-        <div class="links">
-            <a href="ressources/CV_anglais.pdf" target="_blank">My CV in English</a>
-            <a href="ressoucres/CV_francais.pdf" target="_blank">My CV in French</a>
-            <a href="https://www.linkedin.com/in/abel-fares-39187b27a" target="_blank">LinkedIn Profile</a>
-        </div>
-        <!-- Warning Band -->
-        <div class="warning-band">
-            <p>This website was not developed for mobile devices.</p>
+            <section class="w-full max-w-3xl mt-8 px-8 py-6 text-center bg-paper rounded-xl shadow-soft">
+                <p class="text-lg font-sans text-slate">Here you can find information about my academic journey, projects, and experiences.</p>
+            </section>
+
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a class="inline-flex items-center px-5 py-2 text-sm font-sans font-semibold tracking-wideish text-ink bg-paper rounded-lg shadow-soft hover:bg-moss hover:text-paper transition-colors" href="ressources/CV_anglais.pdf" target="_blank" rel="noopener noreferrer">My CV in English</a>
+                <a class="inline-flex items-center px-5 py-2 text-sm font-sans font-semibold tracking-wideish text-ink bg-paper rounded-lg shadow-soft hover:bg-moss hover:text-paper transition-colors" href="ressources/CV_Abel_Fares.pdf" target="_blank" rel="noopener noreferrer">My CV in French</a>
+                <a class="inline-flex items-center px-5 py-2 text-sm font-sans font-semibold tracking-wideish text-ink bg-paper rounded-lg shadow-soft hover:bg-moss hover:text-paper transition-colors" href="https://www.linkedin.com/in/abel-fares-39187b27a" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+            </div>
         </div>
     </main>
+
+    <div class="fixed inset-x-0 bottom-0 px-6 py-2 text-center text-sm font-sans text-slate bg-paper border-t border-moss">
+        <p>This website was not developed for mobile devices.</p>
+    </div>
 </body>
 </html>

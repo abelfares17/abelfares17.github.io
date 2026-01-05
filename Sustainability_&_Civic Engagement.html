@@ -1,91 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainability & Civic Engagement</title>
-    <link rel="stylesheet" href="Sustainability_&_Civic Engagement.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eportfolio | Abel Fares — Sustainability & Civic Engagement</title>
 
+  <link rel="stylesheet" href="tailwind.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" />
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Welcome</a></li>
-            <li><a href="Engineering_course.html">Engineering course</a></li>
-            <li><a href="Internationnal_mobility.html">International Mobility</a></li>
-            <li><a href="#">Sustainability & Civic Engagement</a></li>
-            <li><a href="Sports_activities.html">Sport & other activities</a></li>
-            <li><a href="Career_project.html" >Career Project</a></li>
-        </ul>
-    </nav>
 
-    <!-- Title section with full-width background image -->
-    <div class="title-banner">
-        <h1>Sustainability & Civic Engagement</h1>
-    </div>
+<body class="min-h-screen flex flex-col bg-cream text-ink font-sans">
+  <!-- Navbar -->
+  <nav class="w-full bg-ink">
+    <ul class="max-w-6xl mx-auto px-6 py-3 grid grid-cols-6 gap-2 text-center text-sm text-paper">
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="index.html">Welcome</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Engineering_course.html">Engineering course</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Internationnal_mobility.html">International Mobility</a></li>
+      <li><span class="block px-3 py-2 rounded-lg bg-moss text-paper">Sustainability & Civic Engagement</span></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Sports_activities.html">Sport & other activities</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Career_project.html">Career Project</a></li>
+    </ul>
+  </nav>
 
-    <!-- Main content sections -->
-    <div class="content-sections">
-        <!-- Section 1 -->
-        <section class="content-section">
-            <div class="text">
-                <img src="ressources/title_climate_frsk.png" alt="Section Title" class="title-image">
-                <p>Climate change has been a major issue worldwide for a few decades now. 
-                    As future engineers, our duty is to fulfill our jobs while being nature-friendly. 
-                    Thus, climate fresk helped me achieve that and made me aware of our role in green energy transition. 
-                    Moreover, we aimed to link several cards and to decide whether these were consequences or causes. 
-                    You may view it as a low-interest activity but it made us realize we had a role to play for the environment's sake.
-                    Throughout this workshop, we were handed several images which were composed of a title 
-                    and an image at the recto and a description/definition at the verso. 
-                    Therefore, each person had to sum up the card and the group decided its position on the board, 
-                    thus leading to several discussions over some cards concerning different topics.
-                    To sum it up, the climate fresk is a great way to sensitize young engineers like us, in dying need of foresight. 
-                    It not only helped us better understand our environment and the key role we had to play but also initiated us to have debates over climate change while being concise and effective as a team.</p>
-            </div>
-            <div class="image" style="background-image: url('ressources/Fresque.png');"></div>
-        </section>
+  <main class="w-full flex-1">
+    <!-- HERO BANNER (full width) -->
+    <section class="relative w-full overflow-hidden">
+      <div class="absolute inset-0">
+        <!-- choose any image you like here -->
+        <img src="ressources/Fresque.png" alt="Sustainability banner" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-ink/60"></div>
+      </div>
 
-        <!-- Section 2 -->
-        <section class="content-section">
-            <div class="image" style="background-image: url('ressources/procès_king_kong.jpg');"></div>
-            <div class="text">
-                <h2>King Kong diversity-inclusion play</h2>
-                <p>I had the opportunity to attend this play named King Kong's Trial. 
-                    This interactive play tackled several important issues such as sex abuse, consent, and sexism. 
-                    Indeed, while actors were playing, a narrator would ask several questions concerning their behavior and their remarks. 
-                    This play's aim was to make us notice if anything was going wrong and also question us about their behaviors, on whether they were tolerable or not.
-                    Overall, there were 2-3 scenes that we discussed and overall it was interesting to see people had different insights on certain situations.
+      <div class="relative max-w-6xl mx-auto px-6 py-14 md:py-20">
+        <h1 class="text-3xl md:text-5xl font-display text-paper">
+          Sustainability & Civic Engagement
+        </h1>
+        <p class="mt-4 text-paper/90 max-w-3xl text-lg">
+          Beyond technical skills, I believe engineering requires responsibility: understanding environmental challenges,
+          contributing to inclusive initiatives, and taking leadership roles in collective projects.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="px-3 py-1 text-sm rounded-full border border-paper/30 text-paper/90">Sustainability awareness</span>
+          <span class="px-3 py-1 text-sm rounded-full border border-paper/30 text-paper/90">Civic engagement</span>
+          <span class="px-3 py-1 text-sm rounded-full border border-paper/30 text-paper/90">Leadership & organisation</span>
+          <span class="px-3 py-1 text-sm rounded-full border border-paper/30 text-paper/90">Tutoring & equal opportunity</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="max-w-6xl mx-auto px-6 py-12 pb-24">
+      <!-- Intro strip -->
+      <div class="bg-paper rounded-xl shadow-soft p-6 md:p-8">
+        <h2 class="text-2xl font-display">Key experiences</h2>
+        <p class="mt-3 text-slate max-w-4xl">
+          This page highlights the experiences where I engaged with sustainability, inclusion and community impact — from
+          awareness workshops to leadership responsibilities inside my school association.
+        </p>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="mt-12 relative">
+        <!-- center line (desktop) -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-moss/30"></div>
+
+        <div class="space-y-10">
+          <!-- 1) Climate Fresk -->
+          <div class="grid grid-cols-12 gap-6 md:gap-10 items-stretch">
+            <div class="col-span-12 md:col-span-5 md:pr-10 md:text-right">
+              <div class="h-full bg-paper rounded-xl shadow-soft p-6 md:p-8">
+                <div class="flex md:justify-end">
+                  <img src="ressources/title_climate_frsk.png" alt="Climate Fresk" class="h-10 object-contain" />
+                </div>
+                <p class="mt-4 text-slate">
+                  The Climate Fresk workshop helped me connect causes and consequences of climate change in a structured way.
+                  It also trained team discussion: each participant summarised cards, debated relationships, and co-built a coherent
+                  system-level representation.
                 </p>
+                <div class="mt-5 flex flex-wrap gap-2 md:justify-end">
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Systems thinking</span>
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Team debate</span>
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Climate awareness</span>
+                </div>
+              </div>
             </div>
-        </section>
-        
-        <!-- Section 3 -->
-        <section class="content-section">
-            <div class="text">
-                <h2>Entrepreneurship</h2>
-                <p>This entrepreneurship day was meant to promote a certain product as we were entrepreneurs. 
-                    We first brainstormed the product we would sell. 
-                    First, we had to study the market of this product and check if any company had a monopoly. 
-                    It turned out we had some competitors but none with a monopoly, so we locked in the idea.
-                    Then, we evaluated the costs of this product based on several factors and also backed up by sources. 
-                    Furthermore, we also studied our targetted customer base so that we could estimate the final cost and if it would be profitable.
-                </p>
-            </div>
-            <div class="image" style="background-image: url('ressources/Entreprenneur.png');"></div>
-        </section>
 
-        <!-- Section 4 -->
-        <section class="content-section">
-            <div class="image" style="background-image: url('ressources/logo-cord-es-de-la-r-ussite-2021-88312-1.webp');"></div>
-            <div class="text">
-                <h2>Tutoring for Students in Need</h2>
-                <p>The goal of this programm based on voluteering is to help students from a poorer socio-economic background in their studies and show them through tutoring that they can achieve great thing through higher studies. 
-                    This program's main goal is to give equal chances to all students to reach and achieve great higher studies. 
-                    I will be part of this program helping high school graduates to get into higher studies with more ease by helphing them raise their level of abilities to the standard.</p>
+            <div class="hidden md:flex col-span-2 justify-center">
+              <div class="w-4 h-4 rounded-full bg-moss mt-8"></div>
             </div>
-        </section>
-    </div>
+
+            <div class="col-span-12 md:col-span-5 md:pl-10">
+              <div class="bg-paper rounded-xl shadow-soft overflow-hidden h-full">
+                <img src="ressources/Fresque.png" alt="Climate Fresk illustration" class="w-full h-64 object-cover" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 2) WEI organiser (NEW) -->
+          <div class="grid grid-cols-12 gap-6 md:gap-10 items-stretch">
+            <div class="col-span-12 md:col-span-5 md:pr-10 order-2 md:order-1">
+              <div class="bg-paper rounded-xl shadow-soft overflow-hidden h-full">
+                <!-- Placeholder: replace later with a WEI/association photo -->
+                <img src="ressources/WEI.jpg" alt="wei image" class="w-full h-64 object-cover" />
+              </div>
+            </div>
+
+            <div class="hidden md:flex col-span-2 justify-center order-1 md:order-2">
+              <div class="w-4 h-4 rounded-full bg-moss mt-8"></div>
+            </div>
+
+            <div class="col-span-12 md:col-span-5 md:pl-10 order-1 md:order-3">
+              <div class="h-full bg-paper rounded-xl shadow-soft p-6 md:p-8">
+                <h3 class="text-xl font-display">Student Association — WEI organiser</h3>
+                <p class="mt-3 text-slate">
+                  I contribute to my school’s student association by helping organise the integration weekend (WEI).
+                  This role requires coordination, logistics, risk management, clear communication, and attention to collective well-being.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Organisation</span>
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Team coordination</span>
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Responsibility</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3) King Kong play -->
+          <div class="grid grid-cols-12 gap-6 md:gap-10 items-stretch">
+            <div class="col-span-12 md:col-span-5 md:pr-10 md:text-right">
+              <div class="h-full bg-paper rounded-xl shadow-soft p-6 md:p-8">
+                <h3 class="text-xl font-display">King Kong — Diversity & Inclusion play</h3>
+                <p class="mt-3 text-slate">
+                  This interactive play addressed consent, sexism and social behaviour through scenes interrupted by a narrator
+                  who asked the audience to analyse what was happening. It was a valuable exercise in awareness and collective discussion.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2 md:justify-end">
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Inclusion</span>
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Ethics</span>
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Debate</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden md:flex col-span-2 justify-center">
+              <div class="w-4 h-4 rounded-full bg-moss mt-8"></div>
+            </div>
+
+            <div class="col-span-12 md:col-span-5 md:pl-10">
+              <div class="bg-paper rounded-xl shadow-soft overflow-hidden h-full">
+                <img src="ressources/procès_king_kong.jpg" alt="King Kong play" class="w-full h-64 object-cover" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 4) Entrepreneurship -->
+          <div class="grid grid-cols-12 gap-6 md:gap-10 items-stretch">
+            <div class="col-span-12 md:col-span-5 md:pr-10 order-2 md:order-1">
+              <div class="bg-paper rounded-xl shadow-soft overflow-hidden h-full">
+                <img src="ressources/Entreprenneur.png" alt="Entrepreneurship" class="w-full h-64 object-cover" />
+              </div>
+            </div>
+
+            <div class="hidden md:flex col-span-2 justify-center order-1 md:order-2">
+              <div class="w-4 h-4 rounded-full bg-moss mt-8"></div>
+            </div>
+
+            <div class="col-span-12 md:col-span-5 md:pl-10 order-1 md:order-3">
+              <div class="h-full bg-paper rounded-xl shadow-soft p-6 md:p-8">
+                <h3 class="text-xl font-display">Entrepreneurship</h3>
+                <p class="mt-3 text-slate">
+                  This project required designing a product, studying the market, estimating costs with sources, defining a target
+                  customer base, and evaluating profitability. It trained structured thinking and communication of a business rationale.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Market analysis</span>
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Costing</span>
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Pitch mindset</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5) Tutoring (updated: continues) -->
+          <div class="grid grid-cols-12 gap-6 md:gap-10 items-stretch">
+            <div class="col-span-12 md:col-span-5 md:pr-10 md:text-right">
+              <div class="h-full bg-paper rounded-xl shadow-soft p-6 md:p-8">
+                <h3 class="text-xl font-display">Tutoring — Equal opportunity</h3>
+                <p class="mt-3 text-slate">
+                  I continue tutoring students from less advantaged backgrounds, helping them build confidence and academic methods.
+                  The objective is to support equal access to higher education through regular guidance and encouragement.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2 md:justify-end">
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Mentoring</span>
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Pedagogy</span>
+                  <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Impact</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden md:flex col-span-2 justify-center">
+              <div class="w-4 h-4 rounded-full bg-moss mt-8"></div>
+            </div>
+
+            <div class="col-span-12 md:col-span-5 md:pl-10">
+              <div class="bg-paper rounded-xl shadow-soft overflow-hidden h-full">
+                <img src="ressources/logo-cord-es-de-la-r-ussite-2021-88312-1.webp" alt="Tutoring program" class="w-full h-64 object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA / closing strip -->
+      <div class="mt-14 bg-paper rounded-xl shadow-soft p-6 md:p-8">
+        <h2 class="text-2xl font-display">What I want to keep building</h2>
+        <p class="mt-3 text-slate max-w-4xl">
+          I want to keep connecting engineering with responsibility: sustainability awareness, inclusive initiatives, and concrete
+          engagement in collective projects where organisation and impact matter.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom warning band -->
+  <div class="fixed inset-x-0 bottom-0 z-50 px-6 py-2 text-center text-sm text-slate bg-paper border-t border-moss">
+    <p>This website was not developed for mobile devices.</p>
+  </div>
 </body>
 </html>

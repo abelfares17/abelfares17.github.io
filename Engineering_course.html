@@ -4,82 +4,288 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eportfolio | Abel Fares</title>
-    <link rel="stylesheet" href="Engineering_course.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap">
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Welcome</a></li>
-            <li><a href="#">Engineering course</a></li>
-            <li><a href="Internationnal_mobility.html">International Mobility</a></li>
-            <li><a href="Sustainability_&_Civic Engagement.html">Sustainability & Civic Engagement</a></li>
-            <li><a href="Sports_activities.html">Sport & other activities</a></li>
-            <li><a href="Career_project.html" >Career Project</a></li>
+<body class="min-h-screen bg-cream text-ink font-sans">
+    <nav class="w-full bg-ink">
+        <ul class="max-w-6xl mx-auto px-6 py-3 grid grid-cols-6 gap-2 text-center text-sm text-paper">
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="index.html">Welcome</a>
+            </li>
+            <li>
+                <span class="block px-3 py-2 rounded-lg bg-moss text-paper">Engineering course</span>
+            </li>
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Internationnal_mobility.html">International Mobility</a>
+            </li>
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Sustainability_&_Civic Engagement.html">Sustainability & Civic Engagement</a>
+            </li>
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Sports_activities.html">Sport & other activities</a>
+            </li>
+            <li>
+                <a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Career_project.html">Career Project</a>
+            </li>
         </ul>
     </nav>
 
-    <div class="title-container">
-        <img src="ressources/Title_image_eng.png" alt="Page Title" class="title-image">
-    </div>
-    
-    <div class="banded-section">
-        <section class="semester-section">
-            <h2>Semester 1</h2>
-            
-            <!-- List of classes -->
-            <ul class="class-list">
-                <li>Mathematics : Probability and Integration</li>
-                <li>Imperative Programming</li>
-                <li>Numerical Analysis and Statistics</li>
-                <li>Automation and Data Analysis</li>
-                <li>Modeling and Architecture</li>
-                <li>Soft and Human Skills</li>
-            </ul>
+    <main class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-12 gap-8">
+        <!-- HERO: 3 separate cards -->
+        <section class="col-span-12 flex flex-col gap-8">
+        <!-- Card 1: Title image -->
+        <div class="bg-paper rounded-xl shadow-soft px-6 py-6">
+            <div class="flex justify-center">
+            <img
+                class="w-full max-w-3xl rounded-lg"
+                src="ressources/Title_image_eng.png"
+                alt="Engineering Course Title"
+            />
+            </div>
+        </div>
+
+        <!-- Row under the image: Card 2 + Card 3 -->
+        <div class="grid grid-cols-12 gap-8 items-start">
+            <!-- Card 2: Engineering course (bigger) -->
+            <div class="col-span-12 lg:col-span-8">
+            <div class="bg-paper rounded-xl shadow-soft px-8 py-8 ">
+                <h1 class="text-2xl md:text-3xl font-display text-ink text-center">
+                Engineering Course — Foundations &amp; Applied Projects
+                </h1>
+
+                <p class="mt-4 text-lg text-slate">
+                My engineering education combines strong foundations in mathematics, computing and systems with project-based learning.
+                I progressively developed skills in programming languages, compilation, operating systems, optimisation and distributed systems,
+                and applied these methods continuously through my long-term Voxel Project.
+                </p>
+
+                <div class="mt-6 flex flex-wrap justify-center gap-3">
+                <span class="px-3 py-1 text-sm font-semibold tracking-wideish text-moss border border-moss rounded-full">Mathematics &amp; Modelling</span>
+                <span class="px-3 py-1 text-sm font-semibold tracking-wideish text-moss border border-moss rounded-full">Software Engineering</span>
+                <span class="px-3 py-1 text-sm font-semibold tracking-wideish text-moss border border-moss rounded-full">Systems (Unix)</span>
+                <span class="px-3 py-1 text-sm font-semibold tracking-wideish text-moss border border-moss rounded-full">Compilers (OCaml)</span>
+                <span class="px-3 py-1 text-sm font-semibold tracking-wideish text-moss border border-moss rounded-full">Optimisation</span>
+                <span class="px-3 py-1 text-sm font-semibold tracking-wideish text-moss border border-moss rounded-full">Distributed Systems</span>
+                <span class="px-3 py-1 text-sm font-semibold tracking-wideish text-moss border border-moss rounded-full">Real-time Graphics (OpenGL)</span>
+                </div>
+            </div>
+            </div>
+
+            <!-- Card 3: Highlights (smaller) -->
+            <aside class="col-span-12 lg:col-span-4">
+            <div class="bg-paper rounded-xl shadow-soft px-6 py-6 ">
+                <h2 class="text-xl font-display text-ink">Highlights</h2>
+                <ul class="mt-4 space-y-3 text-slate">
+                <li><span class="text-moss font-semibold">Voxel Project</span> as long-term applied engine work</li>
+                <li><span class="text-moss font-semibold">Systems</span> focus with Unix, concurrency, and networking</li>
+                <li><span class="text-moss font-semibold">Compilers</span> and functional programming in OCaml</li>
+                <li><span class="text-moss font-semibold">Optimisation</span> and modelling for real-world constraints</li>
+                </ul>
+            </div>
+            </aside>
+        </div>
         </section>
-    </div>  
-    <div class="banded-section">
-        <section class="soft-skills-section">
-            <h2>Soft Skills</h2>
-            
-            <!-- List of skills with icons -->
-            <ul class="skills-list">
-                <li><i class="fas fa-lightbulb"></i> Creativity</li>
-                <li><i class="fas fa-handshake"></i> Collaboration</li>
-                <li><i class="fas fa-running"></i> Adaptability</li>
-                <li><i class="fas fa-check"></i> Decision Making</li>
-                <li><i class="fas fa-th"></i> Problem Solving</li>
-                <li><i class="fas fa-comments"></i> Communication</li>
-            </ul>
+
+        <section class="col-span-12 bg-paper rounded-xl shadow-soft px-8 py-8">
+            <h2 class="text-2xl font-display text-ink">Voxel Project — Minecraft-like engine (Java / OpenGL)</h2>
+            <p class="mt-4 text-lg text-slate">Started during TOB (object-oriented programming), my Voxel Project became my long-term engineering sandbox. I used it to apply and consolidate the methods learned in TOB and later in GLS/IDM (software architecture and model-driven thinking). The goal is to build a Minecraft-like game engine in Java using OpenGL (LWJGL), with a focus on modularity, performance and real-time constraints.</p>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Rendering & Graphics</h3>
+                    <ul class="mt-3 space-y-2 text-slate">
+                        <li>OpenGL rendering pipeline (LWJGL)</li>
+                        <li>Voxel meshing from visible faces</li>
+                        <li>Textured blocks and UI/menu rendering</li>
+                        <li>Advanced lighting: shadow mapping</li>
+                    </ul>
+                </article>
+                <article class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">World Streaming & Performance</h3>
+                    <ul class="mt-3 space-y-2 text-slate">
+                        <li>Chunk-based world representation</li>
+                        <li>Dynamic terrain generation and streaming</li>
+                        <li>Multithreaded generation/meshing pipeline</li>
+                        <li>Memory-aware loading/unloading to explore an “infinite” world</li>
+                    </ul>
+                </article>
+                <article class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Software Architecture</h3>
+                    <ul class="mt-3 space-y-2 text-slate">
+                        <li>High modularity (world/chunks, renderer, UI, input, persistence)</li>
+                        <li>Maintainable design</li>
+                        <li>Clean Java architecture patterns</li>
+                    </ul>
+                </article>
+                <article class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Persistence & Save Files</h3>
+                    <ul class="mt-3 space-y-2 text-slate">
+                        <li>Save/load chunk data</li>
+                        <li>File organisation for worlds</li>
+                        <li>Compression strategies for compact saves</li>
+                    </ul>
+                </article>
+            </div>
+            <p class="mt-4 text-sm text-slate">Status: ongoing project — continuously improved as I progress through the curriculum.</p>
         </section>
-    </div>
-    <div class="banded-section">
-        <section class="tech-section">
-            <h2>Technical Skills</h2>
-            
-            <!-- List of classes -->
-            <ul class="tech-skill-list">
-                <li>Python</li>
-                <li>Ada</li>
-                <li>Matlab</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Bash</li>
-            </ul>
+
+        <section class="col-span-12">
+            <h2 class="text-2xl font-display text-ink">Proofs</h2>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Mandelbrot viewer</h3>
+                    <p class="mt-3 text-slate">UI project to visualise the Mandelbrot fractal, combining numerical computation, rendering, and performance considerations.</p>
+                </article>
+                <article class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Dijkstra</h3>
+                    <p class="mt-3 text-slate">Implementation of Dijkstra’s shortest path algorithm on directed graphs, focusing on data structures, memory handling, and correctness (distances, predecessors, path reconstruction).</p>
+                </article>
+                <article class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Systems & Compilers</h3>
+                    <p class="mt-3 text-slate">SEC mini-shell and TDL compiler in OCaml, applying processes, parsing, and compilation pipeline fundamentals.</p>
+                </article>
+            </div>
         </section>
-    </div>
-    <div class="banded-section">
-        <section class="language-section">
-            <h2>Languages</h2>
-            
-            <!-- List of classes -->
-            <ul class="language-list">
-                <li>Françcais : mother language</li>
-                <li>English : C2</li>
-                <li>German : A2</li>
-                <li>Spanish : A1</li>
-            </ul>
+
+        <section class="col-span-12">
+            <h2 class="text-2xl font-display text-ink">Semester 1 — Core foundations</h2>
+            <div class="mt-5 flex flex-wrap gap-3">
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">Mathematics: Probability and Integration</span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">Imperative Programming</span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">Numerical Analysis and Statistics</span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">Automation and Data Analysis</span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">Modeling and Architecture</span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">Soft and Human Skills</span>
+            </div>
+            <p class="mt-4 text-slate">This semester built the mathematical and programming foundations needed for more advanced systems and software engineering projects.</p>
         </section>
+
+        <section class="col-span-12">
+            <h2 class="text-2xl font-display text-ink">Semester 2 — Systems, Signals & Software Engineering</h2>
+
+            <div class="mt-5 flex flex-wrap gap-3">
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">
+                Signal Processing & Telecommunications
+                </span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">
+                Computer Networks
+                </span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">
+                Scientific Computing & Machine Learning
+                </span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">
+                Object-Oriented Technology (TOB)
+                </span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">
+                Architecture & Operating Systems (Assembly & SEC)
+                </span>
+            </div>
+
+            <p class="mt-4 text-slate">
+                This semester focused on lower-level systems, signal processing and advanced software design,
+                strengthening my ability to reason across abstraction layers and performance constraints.
+            </p>
+        </section>
+
+        <section class="col-span-12">
+            <h2 class="text-2xl font-display text-ink">Semester 3 — Software Engineering, Languages & Optimisation</h2>
+
+            <div class="mt-5 flex flex-wrap gap-3">
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">
+                Functional Programming & Language Translation (Compilers)
+                </span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">
+                Concurrent & Communicating Systems
+                </span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">
+                Automata & Formal Languages + Graph Theory
+                </span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">
+                Software & Systems Engineering (GLS)
+                </span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">
+                Optimisation & Operations Research
+                </span>
+            </div>
+
+            <p class="mt-4 text-slate">
+                This semester strengthened my ability to design robust software systems, reason about concurrency and formal models,
+                and solve constrained optimisation problems using both theoretical tools and practical implementations.
+            </p>
+        </section>
+
+        <section class="col-span-12">
+            <h2 class="text-2xl font-display text-ink">Key Engineering Areas</h2>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Programming Languages & Compilation</h3>
+                    <p class="mt-3 text-slate">From imperative and modular programming (Ada) to functional programming and compiler construction (OCaml), I gained a rigorous understanding of how programs are structured, checked and translated into low-level code.</p>
+                </article>
+                <article class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Operating Systems & Concurrency</h3>
+                    <p class="mt-3 text-slate">Through SEC and concurrency coursework, I studied processes, signals, memory, I/O and parallel execution models, and applied these concepts in system-level programming projects.</p>
+                </article>
+                <article class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Optimisation, Modelling & Distributed Systems</h3>
+                    <p class="mt-3 text-slate">I explored numerical optimisation and operational research for constrained problems, and discovered distributed systems through practical work on sockets, RMI/JMS and web services.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="col-span-12">
+            <h2 class="text-2xl font-display text-ink">Technical Skills & Tools</h2>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Languages</h3>
+                    <ul class="mt-4 list-disc list-inside text-slate space-y-1">
+                        <li>Java</li>
+                        <li>C</li>
+                        <li>Ada</li>
+                        <li>OCaml</li>
+                        <li>Python</li>
+                        <li>MATLAB</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Tools</h3>
+                    <ul class="mt-4 list-disc list-inside text-slate space-y-1">
+                    <li>Java</li>
+                    <li>C</li>
+                    <li>Ada</li>
+                    <li>OCaml</li>
+                    <li>Python</li>
+                    <li>MATLAB</li>
+                    <li>HTML/CSS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow md:col-span-2">
+                    <h3 class="text-lg font-display text-ink">Soft Skills</h3>
+                    <ul class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-slate">
+                        <li class="flex items-center gap-3"><span>💡</span><span>Creativity — exploring alternatives and building prototypes</span></li>
+                        <li class="flex items-center gap-3"><span>🤝</span><span>Collaboration — teamwork, shared standards, iterative feedback</span></li>
+                        <li class="flex items-center gap-3"><span>🏃</span><span>Adaptability — learning new tools quickly and adjusting to constraints</span></li>
+                        <li class="flex items-center gap-3"><span>✅</span><span>Decision making — prioritising trade-offs and delivering on time</span></li>
+                        <li class="flex items-center gap-3"><span>🧩</span><span>Problem Solving — breaking down complex issues and iterating</span></li>
+                        <li class="flex items-center gap-3"><span>💬</span><span>Communication — clear explanations, documentation, structured reporting</span></li>
+                    </ul>
+                </div>
+                <div class="px-5 py-5 bg-paper rounded-xl border border-moss/20 hover:shadow-soft transition-shadow">
+                    <h3 class="text-lg font-display text-ink">Languages</h3>
+                    <ul class="mt-4 space-y-2 text-slate">
+                        <li>French — native</li>
+                        <li>English — C2 </li>
+                        <li>German — A2</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="fixed inset-x-0 bottom-0 px-6 py-2 text-center text-sm text-slate bg-paper border-t border-moss">
+        <p>This website was not developed for mobile devices.</p>
     </div>
 </body>
+</html>

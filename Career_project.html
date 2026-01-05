@@ -1,56 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Project</title>
-    <link rel="stylesheet" href="Career_project_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eportfolio | Abel Fares — Career Project</title>
 
+  <link rel="stylesheet" href="tailwind.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" />
 </head>
-<body>
-    <main>
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Welcome</a></li>
-                <li><a href="Engineering_course.html">Engineering course</a></li>
-                <li><a href="Internationnal_mobility.html">International Mobility</a></li>
-                <li><a href="Sustainability_&_Civic Engagement.html">Sustainability & Civic Engagement</a></li>
-                <li><a href="Sports_activities.html">Sport & other activities</a></li>
-                <li><a href="#" >Career Project</a></li>
+
+<body class="min-h-screen flex flex-col bg-cream text-ink font-sans">
+  <!-- Navbar -->
+  <nav class="w-full bg-ink">
+    <ul class="max-w-6xl mx-auto px-6 py-3 grid grid-cols-6 gap-2 text-center text-sm text-paper">
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="index.html">Welcome</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Engineering_course.html">Engineering course</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Internationnal_mobility.html">International Mobility</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Sustainability_&_Civic Engagement.html">Sustainability & Civic Engagement</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Sports_activities.html">Sport & other activities</a></li>
+      <li><span class="block px-3 py-2 rounded-lg bg-moss text-paper">Career Project</span></li>
+    </ul>
+  </nav>
+
+  <main class="w-full flex-1">
+    <div class="max-w-6xl mx-auto px-6 py-12 pb-24 space-y-12">
+      <!-- Title -->
+      <header class="text-center">
+        <h1 class="text-3xl md:text-4xl font-display text-ink">Career Project</h1>
+        <p class="mt-3 text-slate max-w-3xl mx-auto">
+          A short view of my professional direction, key documents, and a private elevator pitch video.
+        </p>
+      </header>
+
+      <!-- Links (CV / LinkedIn) -->
+      <section class="bg-paper rounded-xl shadow-soft p-6 md:p-8">
+        <h2 class="text-2xl font-display">Documents & links</h2>
+        <p class="mt-2 text-slate">
+          Download my CVs or visit my LinkedIn profile.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-4">
+          <a
+            class="inline-flex items-center px-5 py-2 text-sm font-semibold tracking-wideish text-ink bg-paper rounded-lg border border-moss/20 shadow-soft hover:bg-moss hover:text-paper transition-colors"
+            href="ressources/CV_anglais.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV (English)
+          </a>
+
+          <a
+            class="inline-flex items-center px-5 py-2 text-sm font-semibold tracking-wideish text-ink bg-paper rounded-lg border border-moss/20 shadow-soft hover:bg-moss hover:text-paper transition-colors"
+            href="ressources/CV_Abel_Fares.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CV (French)
+          </a>
+          <a
+            class="inline-flex items-center px-5 py-2 text-sm font-semibold tracking-wideish text-ink bg-paper rounded-lg border border-moss/20 shadow-soft hover:bg-moss hover:text-paper transition-colors"
+            href="ressources/PPP_presentation.pdf"
+            download="PPP_AbelFares_Presentation.pdf"
+            >
+            Download PPP Slides (PDF)
+            </a>
+
+          <a
+            class="inline-flex items-center px-5 py-2 text-sm font-semibold tracking-wideish text-ink bg-paper rounded-lg border border-moss/20 shadow-soft hover:bg-moss hover:text-paper transition-colors"
+            href="https://www.linkedin.com/in/abel-fares-39187b27a"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </section>
+
+      <!-- Professional project (priority) -->
+      <section class="grid grid-cols-12 gap-8 items-stretch">
+        <div class="col-span-12">
+          <h2 class="text-2xl font-display">Professional project</h2>
+          <p class="mt-2 text-slate max-w-4xl">
+            I’m building a technical profile that keeps a strong software engineering core, while staying open to applied research
+            paths in computational methods.
+          </p>
+        </div>
+
+        <!-- Option 1 (primary) -->
+        <article class="col-span-12 lg:col-span-7">
+          <div class="bg-paper rounded-xl shadow-soft p-6 md:p-8 h-full">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 text-xs font-semibold tracking-wideish rounded-full bg-moss text-paper">Priority #1</span>
+              <h3 class="text-xl md:text-2xl font-display">Software Engineer / Software Developer</h3>
+            </div>
+
+            <p class="mt-4 text-slate">
+              My first career direction is software engineering: designing robust systems, building maintainable architectures,
+              and delivering performant applications. I enjoy projects where performance and structure matter (systems, concurrency,
+              graphics, tooling, backend services).
+            </p>
+
+            <ul class="mt-5 list-disc list-inside text-slate space-y-2">
+              <li>Strong focus on software architecture and clean modular code</li>
+              <li>Systems mindset: performance, memory, concurrency, debugging</li>
+              <li>Project-based approach: ship features, iterate, document results</li>
             </ul>
-        </nav>
-        <!-- Title Text Box -->
-        <h1 class="page-title">Carrier project</h1>
-        <!-- Links Section -->
-        <div class="links">
-            <a href="ressources/CV_anglais.pdf" target="_blank">My CV in English</a>
-            <a href="ressources/CV_francais.pdf" target="_blank">My CV in French</a>
-            <a href="https://www.linkedin.com/in/abel-fares-39187b27a" target="_blank">LinkedIn Profile</a>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Java</span>
+              <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">C</span>
+              <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Systems</span>
+              <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">Concurrency</span>
+              <span class="px-3 py-1 text-sm rounded-full border border-moss/20 text-slate bg-paper">OpenGL (LWJGL)</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Option 2 (secondary) -->
+        <article class="col-span-12 lg:col-span-5">
+          <div class="bg-paper rounded-xl shadow-soft p-6 md:p-8 h-full">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 text-xs font-semibold tracking-wideish rounded-full border border-moss/30 text-moss bg-paper">Option #2</span>
+              <h3 class="text-xl font-display">Applied research</h3>
+            </div>
+
+            <p class="mt-4 text-slate">
+              My second option is research-oriented work in applied mathematics and computing, such as image processing,
+              scientific computing, or machine learning—especially when it connects theory to real implementations.
+            </p>
+
+            <ul class="mt-5 list-disc list-inside text-slate space-y-2">
+              <li>Scientific computing & numerical methods</li>
+              <li>Imaging / signal processing</li>
+              <li>Machine learning (when grounded in solid evaluation)</li>
+            </ul>
+
+            <div class="mt-6 rounded-xl border border-moss/20 p-4">
+              <p class="text-sm text-slate">
+                I’m particularly interested in paths that combine strong coding standards with quantitative modelling.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Elevator speech (password-gated YouTube) -->
+      <section class="bg-paper rounded-xl shadow-soft p-6 md:p-8">
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div>
+      <h2 class="text-2xl font-display">My elevator speech</h2>
+      <p class="mt-2 text-slate max-w-3xl">
+        The video is private for recruiters / contacts. Click to request access and enter the password.
+      </p>
+    </div>
+
+    <button
+      id="open-video-modal"
+      type="button"
+      class="inline-flex items-center justify-center px-5 py-2 rounded-lg bg-ink text-paper font-semibold hover:bg-moss transition-colors"
+    >
+      Watch (password)
+    </button>
+  </div>
+</section>
+
+<!-- Modal overlay (hidden by default) -->
+<div id="video-modal" class="fixed inset-0 z-50 hidden">
+  <!-- backdrop -->
+  <div id="video-backdrop" class="absolute inset-0 bg-ink/70 backdrop-blur-sm"></div>
+
+  <!-- modal panel -->
+  <div class="relative min-h-screen flex items-center justify-center px-6 py-10">
+    <div class="w-full max-w-3xl bg-paper rounded-2xl shadow-soft overflow-hidden border border-moss/20">
+        <div class="p-6 md:p-8">
+            <div class="flex items-start justify-between gap-4">
+                <div>
+                    <h3 class="text-xl font-display">Private video</h3>
+                    <p class="mt-1 text-sm text-slate">
+                    Enter the password to reveal the YouTube player. No preview is loaded.
+                    </p>
+                </div>
+
+                <button
+                    id="close-video-modal"
+                    type="button"
+                    class="px-3 py-2 rounded-lg border border-moss/20 hover:bg-cream transition-colors"
+                    aria-label="Close modal"
+                >
+                    ✕
+                </button>
+                </div>
+
+                <!-- Unlock form -->
+                <div id="unlock-panel" class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3 items-end">
+                <div class="md:col-span-2">
+                    <label for="video-password" class="block text-sm font-semibold text-slate">Password</label>
+                    <input
+                    id="video-password"
+                    type="password"
+                    placeholder="Enter password"
+                    class="mt-2 w-full px-4 py-2 rounded-lg border border-moss/20 bg-paper text-ink focus:outline-none"
+                    />
+                </div>
+
+                <button
+                    id="unlock-video"
+                    type="button"
+                    class="h-10 inline-flex items-center justify-center px-5 rounded-lg bg-ink text-paper font-semibold hover:bg-moss transition-colors"
+                >
+                    Unlock
+                </button>
+
+                <p id="unlock-msg" class="md:col-span-3 text-sm text-slate"></p>
+                </div>
+
+                <!-- Video mount (initially empty, no thumbnail) -->
+                <div id="video-mount" class="mt-6 hidden"></div>
+
+                <!-- Optional: small footer actions -->
+                <div class="mt-6 flex justify-end gap-3">
+                <button
+                    id="close-video-modal-2"
+                    type="button"
+                    class="px-4 py-2 rounded-lg border border-moss/20 hover:bg-cream transition-colors"
+                >
+                    Close
+                </button>
+                </div>
+            </div>
+            </div>
         </div>
-        <!-- Sub-Title Text Box -->
-        <div class="sub-title-box">
-            <h1>My Elevator speech</h1>
         </div>
-        <!-- Video Section -->
-        <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/jnruZsZYTR0"
-            title="YouTube video player"
+    </div>
+  </main>
+
+  <!-- Bottom warning band -->
+  <div class="fixed inset-x-0 bottom-0 z-50 px-6 py-2 text-center text-sm text-slate bg-paper border-t border-moss">
+    <p>This website was not developed for mobile devices.</p>
+  </div>
+
+  <!-- Password gate logic (client-side) -->
+  <script>
+    // === CONFIG ===
+    // Client-side gate (NOT secure). For a real solution, see server-side section below.
+    const VIDEO_PASSWORD = "abel2026";
+    const YOUTUBE_EMBED_URL = "https://www.youtube-nocookie.com/embed/jnruZsZYTR0";
+
+    const modal = document.getElementById("video-modal");
+    const openBtn = document.getElementById("open-video-modal");
+    const closeBtn = document.getElementById("close-video-modal");
+    const closeBtn2 = document.getElementById("close-video-modal-2");
+    const backdrop = document.getElementById("video-backdrop");
+
+    const input = document.getElementById("video-password");
+    const unlockBtn = document.getElementById("unlock-video");
+    const msg = document.getElementById("unlock-msg");
+    const mount = document.getElementById("video-mount");
+    const unlockPanel = document.getElementById("unlock-panel");
+
+    let unlocked = false;
+
+    function openModal() {
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        setTimeout(() => input?.focus(), 0);
+    }
+
+    function closeModal() {
+        modal.classList.add("hidden");
+        document.body.style.overflow = "";
+        // Optional: stop video when closing (remove iframe)
+        if (unlocked) {
+        mount.innerHTML = "";
+        mount.classList.add("hidden");
+        unlockPanel.classList.remove("hidden");
+        unlocked = false;
+        input.disabled = false;
+        unlockBtn.disabled = false;
+        input.value = "";
+        msg.textContent = "";
+        msg.className = "md:col-span-3 text-sm text-slate";
+        }
+    }
+
+    function unlockVideo() {
+        const value = (input.value || "").trim();
+
+        if (value !== VIDEO_PASSWORD) {
+        msg.textContent = "Incorrect password.";
+        msg.className = "md:col-span-3 text-sm text-red-600";
+        return;
+        }
+
+        msg.textContent = "Access granted.";
+        msg.className = "md:col-span-3 text-sm text-moss";
+
+        // inject iframe (no thumbnail ever loaded before this)
+        mount.classList.remove("hidden");
+        mount.innerHTML = `
+        <div class="relative w-full overflow-hidden rounded-xl border border-moss/20 bg-black" style="padding-top:56.25%">
+            <iframe
+            class="absolute inset-0 w-full h-full"
+            src="${YOUTUBE_EMBED_URL}"
+            title="Elevator speech"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-        
-        <!-- <video width="600" controls>
-            <source src="Elevator_speech.mp4" type="video/mp4">
-            Your browser does not support the video tag. You can download the video <a href="https://youtu.be/jnruZsZYTR0">here</a>.
-        </video> -->
-        
-        
-    </main>
-    
+            allowfullscreen
+            ></iframe>
+        </div>
+        `;
+
+        unlockPanel.classList.add("hidden");
+        unlocked = true;
+    }
+
+    openBtn.addEventListener("click", openModal);
+    closeBtn.addEventListener("click", closeModal);
+    closeBtn2.addEventListener("click", closeModal);
+    backdrop.addEventListener("click", closeModal);
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+    });
+
+    unlockBtn.addEventListener("click", unlockVideo);
+    input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") unlockVideo();
+    });
+</script>
 </body>
 </html>

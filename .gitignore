@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Large / private media
+*.mp4
+
+# OS files
+.DS_Store
+
+# Build artifacts (si jamais)
+dist/
+.cache/

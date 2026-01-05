@@ -1,0 +1,80 @@
+.
+├── Career_project_style.css
+├── Career_project.html
+├── Engineering_course.css
+├── Engineering_course.html
+├── fonts
+│   ├── JTDouro-Serif-Regular.woff
+│   └── JTDouro-Serif-Regular.woff2
+├── index.css
+├── index.html
+├── input.css
+├── Internationnal_mobility.css
+├── Internationnal_mobility.html
+├── node_modules
+│   ├── @jridgewell
+│   ├── @parcel
+│   ├── @tailwindcss
+│   ├── autoprefixer
+│   ├── baseline-browser-mapping
+│   ├── braces
+│   ├── browserslist
+│   ├── caniuse-lite
+│   ├── detect-libc
+│   ├── electron-to-chromium
+│   ├── enhanced-resolve
+│   ├── escalade
+│   ├── fill-range
+│   ├── fraction.js
+│   ├── graceful-fs
+│   ├── is-extglob
+│   ├── is-glob
+│   ├── is-number
+│   ├── jiti
+│   ├── lightningcss
+│   ├── lightningcss-darwin-arm64
+│   ├── magic-string
+│   ├── micromatch
+│   ├── mri
+│   ├── nanoid
+│   ├── node-addon-api
+│   ├── node-releases
+│   ├── picocolors
+│   ├── picomatch
+│   ├── postcss
+│   ├── postcss-value-parser
+│   ├── source-map-js
+│   ├── tailwindcss
+│   ├── tapable
+│   ├── to-regex-range
+│   └── update-browserslist-db
+├── package-lock.json
+├── package.json
+├── project-structure.txt
+├── README.md
+├── ressources
+│   ├── Australia_uni_image.jpg
+│   ├── CV_anglais.pdf
+│   ├── CV_francais.pdf
+│   ├── Entreprenneur.png
+│   ├── Fresque.png
+│   ├── image_dessin.JPG
+│   ├── Image_london.webp
+│   ├── image_running.jpg
+│   ├── image_uconn.jpg
+│   ├── image_workout.jpg
+│   ├── logo-cord-es-de-la-r-ussite-2021-88312-1.webp
+│   ├── Mon_image.jpg
+│   ├── procès_king_kong.jpg
+│   ├── Sus_Eng_image.png
+│   ├── title_climate_frsk.png
+│   ├── Title_image_eng.png
+│   └── University-of-Birmingham_image.jpg
+├── Sports_activities.css
+├── Sports_activities.html
+├── Sustainability_&_Civic Engagement.css
+├── Sustainability_&_Civic Engagement.html
+├── tailwind.config.cjs
+└── tailwind.css
+
+40 directories, 38 files

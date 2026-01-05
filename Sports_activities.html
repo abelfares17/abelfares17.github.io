@@ -1,49 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports and Other Activities</title>
-    <link rel="stylesheet" href="Sports_activities.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eportfolio | Abel Fares — Sports & Hobbies</title>
 
+  <link rel="stylesheet" href="tailwind.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" />
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Welcome</a></li>
-            <li><a href="Engineering_course.html">Engineering course</a></li>
-            <li><a href="Internationnal_mobility.html">International Mobility</a></li>
-            <li><a href="Sustainability_&_Civic Engagement.html">Sustainability & Civic Engagement</a></li>
-            <li><a href="#">Sport & other activities</a></li>
-            <li><a href="Career_project.html" >Career Project</a></li>
-        </ul>
-    </nav>
 
-    <div class="page-title">
-        <h1>Sports and Other Activities</h1>
+<body class="min-h-screen flex flex-col bg-cream text-ink font-sans">
+  <!-- Navbar -->
+  <nav class="w-full bg-ink">
+    <ul class="max-w-6xl mx-auto px-6 py-3 grid grid-cols-6 gap-2 text-center text-sm text-paper">
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="index.html">Welcome</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Engineering_course.html">Engineering course</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Internationnal_mobility.html">International Mobility</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Sustainability_&_Civic Engagement.html">Sustainability & Civic Engagement</a></li>
+      <li><span class="block px-3 py-2 rounded-lg bg-moss text-paper">Sport & other activities</span></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Career_project.html">Career Project</a></li>
+    </ul>
+  </nav>
+
+  <main class="w-full flex-1">
+    <div class="max-w-6xl mx-auto px-6 py-12 pb-24 space-y-12">
+      <!-- Hero -->
+      <header class="text-center">
+        <h1 class="text-3xl md:text-4xl font-display text-ink">Sports & Hobbies</h1>
+        <p class="mt-3 text-slate max-w-3xl mx-auto">
+          These activities help me keep a healthy balance during demanding study periods: physical performance, cardiovascular
+          health, and creative routines that keep me grounded.
+        </p>
+      </header>
+
+      <!-- ===== SPORTS ===== -->
+      <section class="space-y-4">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+          <div>
+            <h2 class="text-2xl font-display text-ink">Sports</h2>
+            <p class="mt-2 text-slate max-w-3xl">
+              Strength & endurance — for energy, focus, stress management and long-term health.
+            </p>
+          </div>
+          <div class="text-sm text-slate">
+            <span class="px-3 py-1 rounded-full border border-moss/20 bg-paper">Consistency</span>
+            <span class="ml-2 px-3 py-1 rounded-full border border-moss/20 bg-paper">Discipline</span>
+            <span class="ml-2 px-3 py-1 rounded-full border border-moss/20 bg-paper">Recovery</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Strength Training -->
+          <article class="group relative overflow-hidden rounded-xl shadow-soft bg-paper h-72">
+            <div class="absolute inset-0">
+              <img
+                src="ressources/image_workout.jpg"
+                alt="Strength Training"
+                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="absolute inset-0 bg-ink/55 group-hover:bg-ink/45 transition-colors"></div>
+            </div>
+
+            <div class="relative h-full p-6 flex flex-col justify-end">
+              <p class="text-sm font-semibold tracking-wideish text-paper/90">Sports</p>
+              <h3 class="mt-1 text-2xl font-display text-paper">Strength Training</h3>
+              <p class="mt-3 text-paper/90 max-w-prose">
+                Helps me relieve stress and tension, improve sleep quality, and build confidence through structured progression.
+              </p>
+            </div>
+          </article>
+
+          <!-- Running / Hiking -->
+          <article class="group relative overflow-hidden rounded-xl shadow-soft bg-paper h-72">
+            <div class="absolute inset-0">
+              <img
+                src="ressources/image_running.jpg"
+                alt="Running and Hiking"
+                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="absolute inset-0 bg-ink/55 group-hover:bg-ink/45 transition-colors"></div>
+            </div>
+
+            <div class="relative h-full p-6 flex flex-col justify-end">
+              <p class="text-sm font-semibold tracking-wideish text-paper/90">Sports</p>
+              <h3 class="mt-1 text-2xl font-display text-paper">Running / Hiking</h3>
+              <p class="mt-3 text-paper/90 max-w-prose">
+                A simple way to maintain cardiovascular health, clear my mind, and enjoy measurable progress over time.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== HOBBIES ===== -->
+      <section class="space-y-4">
+        <div>
+          <h2 class="text-2xl font-display text-ink">Hobbies</h2>
+          <p class="mt-2 text-slate max-w-3xl">
+            Creative and calm activities that reinforce attention to detail, patience, and personal balance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Reading (placeholder image) -->
+          <article class="group relative overflow-hidden rounded-xl shadow-soft bg-paper h-72">
+            <div class="absolute inset-0">
+              <img
+                src="ressources/books.jpeg"
+                alt="Reading"
+                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="absolute inset-0 bg-ink/55 group-hover:bg-ink/45 transition-colors"></div>
+            </div>
+
+            <div class="relative h-full p-6 flex flex-col justify-end">
+              <p class="text-sm font-semibold tracking-wideish text-paper/90">Hobbies</p>
+              <h3 class="mt-1 text-2xl font-display text-paper">Reading</h3>
+              <p class="mt-3 text-paper/90 max-w-prose">
+                Helps me build focus and curiosity, and gives me long-term perspective beyond day-to-day tasks.
+              </p>
+            </div>
+          </article>
+
+          <!-- Drawing -->
+          <article class="group relative overflow-hidden rounded-xl shadow-soft bg-paper h-72">
+            <div class="absolute inset-0">
+              <img
+                src="ressources/image_dessin.JPG"
+                alt="Drawing"
+                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="absolute inset-0 bg-ink/55 group-hover:bg-ink/45 transition-colors"></div>
+            </div>
+
+            <div class="relative h-full p-6 flex flex-col justify-end">
+              <p class="text-sm font-semibold tracking-wideish text-paper/90">Hobbies</p>
+              <h3 class="mt-1 text-2xl font-display text-paper">Drawing</h3>
+              <p class="mt-3 text-paper/90 max-w-prose">
+                A cathartic practice that develops creativity and an artistic way of looking at the world.
+              </p>
+            </div>
+          </article>
+
+          <!-- Cooking (placeholder image) -->
+          <article class="group relative overflow-hidden rounded-xl shadow-soft bg-paper h-72">
+            <div class="absolute inset-0">
+              <img
+                src="ressources/cooking.jpg"
+                alt="Cooking"
+                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="absolute inset-0 bg-ink/55 group-hover:bg-ink/45 transition-colors"></div>
+            </div>
+
+            <div class="relative h-full p-6 flex flex-col justify-end">
+              <p class="text-sm font-semibold tracking-wideish text-paper/90">Hobbies</p>
+              <h3 class="mt-1 text-2xl font-display text-paper">Cooking</h3>
+              <p class="mt-3 text-paper/90 max-w-prose">
+                A practical way to relax while learning discipline, timing, and creativity through small improvements.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
     </div>
+  </main>
 
-    <div class="activities">
-        <section class="activity" style="background-image: url('ressources/image_workout.jpg');">
-            <h2>Weight training</h2>
-            <p>Weight training has helped me a lot through my studies because it helps relive stress adn tension, and brings
-             physical balance and sleep quality improvments. It also improves body image and therefore confidence.</p>
-        </section>
-
-        <section class="activity" style="background-image: url('ressources/image_running.jpg');">
-            <h2>Running</h2>
-            <p>Running is also a very healthy activity however the reason I do it is for the dopamine it provides 
-                and the quick progression in performance in the face of adversity that provides a lot of satisfaction.</p>
-        </section>
-
-        <section class="activitybis" style="background-image: url('ressources/image_dessin.JPG');">
-            <h2>Drawing</h2>
-            <p>Drawing has always been a cathartic experience for me, and has also helped me improve my creativity 
-            and gave me an artistic outlook on the world.</p>
-        </section>
-
-    </div>
+  <!-- Bottom warning band -->
+  <div class="fixed inset-x-0 bottom-0 z-50 px-6 py-2 text-center text-sm text-slate bg-paper border-t border-moss">
+    <p>This website was not developed for mobile devices.</p>
+  </div>
 </body>
 </html>

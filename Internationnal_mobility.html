@@ -1,52 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International Mobility</title>
-    <link rel="stylesheet" href="Internationnal_mobility.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eportfolio | Abel Fares — International Mobility</title>
 
+  <!-- Tailwind (compiled) -->
+  <link rel="stylesheet" href="tailwind.css" />
+
+  <!-- Body font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" />
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Welcome</a></li>
-            <li><a href="Engineering_course.html">Engineering course</a></li>
-            <li><a href="#">International Mobility</a></li>
-            <li><a href="Sustainability_&_Civic Engagement.html">Sustainability & Civic Engagement</a></li>
-            <li><a href="Sports_activities.html">Sport & other activities</a></li>
-            <li><a href="Career_project.html" >Career Project</a></li>
-        </ul>
-    </nav>
-    
-    <!-- Centered Title -->
-    <h1 class="page-title">International Mobility</h1>
 
-    <!-- Grid Container -->
-    <div class="grid-container">
-        <!-- Row 1 -->
-        <div class="grid-item image-item" style="background-image: url('ressources/image_uconn.jpg');"></div>
-        <div class="grid-item text-item">
-            <h2>University of Connecticut, Connecticut, USA</h2>
-            <p>I would like to visit the US to experience their different academic and work culture that can be greatly benficial for my future carrier as I might end up working with colaborators from all around the globe</p>
+<body class="min-h-screen flex flex-col bg-cream text-ink font-sans">
+  <!-- Navbar -->
+  <nav class="w-full bg-ink">
+    <ul class="max-w-6xl mx-auto px-6 py-3 grid grid-cols-6 gap-2 text-center text-sm text-paper">
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="index.html">Welcome</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Engineering_course.html">Engineering course</a></li>
+      <li><span class="block px-3 py-2 rounded-lg bg-moss text-paper">International Mobility</span></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Sustainability_&_Civic Engagement.html">Sustainability & Civic Engagement</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Sports_activities.html">Sport & other activities</a></li>
+      <li><a class="block px-3 py-2 rounded-lg hover:bg-moss transition-colors" href="Career_project.html">Career Project</a></li>
+    </ul>
+  </nav>
+
+  <main class="w-full flex-1">
+    <div class="max-w-6xl mx-auto px-6 py-12 pb-24 space-y-12">
+      <!-- Page title -->
+      <header class="text-center">
+        <h1 class="text-3xl md:text-4xl font-display text-ink">International Mobility</h1>
+        <p class="mt-3 text-slate max-w-3xl mx-auto">
+          Planned gap year abroad to work internationally — either a long dev internship or a job to self-fund the experience.
+          Target destinations: Canada or Australia.
+        </p>
+      </header>
+
+      <!-- HERO: banner image + project summary -->
+      <section class="grid grid-cols-12 gap-8 items-start">
+        <!-- Big banner -->
+        <div class="col-span-12 lg:col-span-7">
+          <div class="bg-paper rounded-xl shadow-soft overflow-hidden">
+            <div class="h-56 md:h-72 w-full bg-ink/10">
+              <!-- Replace with your own image if you want -->
+              <img
+                src="ressources/gap_year.jpg"
+                alt="International project banner"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6 md:p-8">
+              <h2 class="text-2xl font-display">Gap Year — Work Abroad (Canada / Australia)</h2>
+              <p class="mt-3 text-slate">
+                The goal is to take a one-year break in my engineering curriculum to work abroad in a real professional environment.
+                This project is designed to build financial autonomy, strengthen professional English, and gain maturity through
+                responsibility and cultural immersion.
+              </p>
+
+              <div class="mt-6 flex flex-wrap gap-3">
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">Self-funded experience</span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">Professional English</span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">Real-world constraints</span>
+                <span class="px-3 py-1 text-sm text-slate bg-paper border border-moss/20 rounded-full">Career clarity</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Row 2 -->
-        <div class="grid-item text-item2">
-            <h2>University of Birmingham, Birmingham, UK</h2>
-            <p>I find the course in Mathematics and statistics provided by the Univeristy of Brimingham to be a very interesting option for my studies and might push me towards a carrier of data scientist. 
-                I also have never been in England for a prolonged time and I am eager to discover the cuilture.</p>
-        </div>
-        <div class="grid-item image-item" style="background-image: url('ressources/University-of-Birmingham_image.jpg');"></div>
+        <!-- Right: quick highlights -->
+        <aside class="col-span-12 lg:col-span-5">
+          <div class="bg-paper rounded-xl shadow-soft p-6 md:p-8">
+            <h3 class="text-xl font-display">Why a gap year?</h3>
+            <ul class="mt-4 space-y-3 text-slate">
+              <li><span class="text-moss font-semibold">Finance:</span> earn and manage a real budget abroad</li>
+              <li><span class="text-moss font-semibold">English:</span> daily professional communication</li>
+              <li><span class="text-moss font-semibold">Adaptability:</span> autonomy, logistics, responsibility</li>
+              <li><span class="text-moss font-semibold">Career:</span> confirm a dev path or broaden options</li>
+            </ul>
 
-        <!-- Row 3 -->
-        <div class="grid-item image-item" style="background-image: url('ressources/Australia_uni_image.jpg');"></div>
-        <div class="grid-item text-item3">
-            <h2>Queensland University of Technology, Queensland, Australia</h2>
-            <p>Over and above the reputation of the Queensland University of Technology, going to study there would give me the experience of a completely different culture with completely different constraints, due to the environment.</p>
+            <div class="mt-6 rounded-xl border border-moss/20 p-4">
+              <p class="text-sm text-slate">
+                I will document the experience (projects, learnings, outcomes) and integrate it into this e-portfolio.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- DESTINATIONS: Canada / Australia -->
+      <section class="grid grid-cols-12 gap-8 items-stretch">
+        <div class="col-span-12">
+          <h2 class="text-2xl font-display">Target destinations</h2>
+          <p class="mt-2 text-slate">
+            Two options with different strengths: a dev internship track (Canada) vs. work-and-immersion track (Australia).
+          </p>
         </div>
+
+        <!-- Canada card -->
+        <article class="col-span-12 lg:col-span-6">
+          <div class="bg-paper rounded-xl shadow-soft overflow-hidden h-full">
+            <div class="h-48 w-full bg-ink/10">
+              <img
+                src="ressources/Canada_gap_year.jpg"
+                alt="Canada placeholder"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="text-xl font-display">Option A — Canada (long dev internship)</h3>
+              <p class="mt-3 text-slate">
+                Canada is attractive for its multicultural environment and dynamic tech ecosystem. I aim to secure a long-term
+                software development internship where I can apply skills in programming, systems and software architecture in English.
+              </p>
+
+              <ul class="mt-5 list-disc list-inside text-slate space-y-1">
+                <li>Professional experience aligned with software engineering</li>
+                <li>International teams and workplace communication</li>
+                <li>Strong leverage for future internships & applications</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Australia card -->
+        <article class="col-span-12 lg:col-span-6">
+          <div class="bg-paper rounded-xl shadow-soft overflow-hidden h-full">
+            <div class="h-48 w-full bg-ink/10">
+              <img
+                src="ressources/Sydney_gap_year.jpg"
+                alt="Australia placeholder"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="text-xl font-display">Option B — Australia (work & cultural immersion)</h3>
+              <p class="mt-3 text-slate">
+                Australia is ideal for a work-and-immersion gap year. Through working-holiday style opportunities, I can take a job
+                to fully self-fund the experience while building resilience, autonomy, and adaptability.
+              </p>
+
+              <ul class="mt-5 list-disc list-inside text-slate space-y-1">
+                <li>Self-funded year + real-life constraints management</li>
+                <li>Deep cultural immersion in an English-speaking country</li>
+                <li>Personal growth that transfers directly to engineering projects</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- OBJECTIVES -->
+      <section>
+        <h2 class="text-2xl font-display">Objectives</h2>
+
+        <div class="mt-6 grid grid-cols-12 gap-8">
+          <div class="col-span-12 md:col-span-6 lg:col-span-3">
+            <div class="bg-paper rounded-xl shadow-soft p-6 h-full">
+              <p class="text-sm font-semibold tracking-wideish text-moss">Professional</p>
+              <h3 class="mt-2 text-lg font-display">Real work experience</h3>
+              <p class="mt-3 text-slate">
+                Internship in development or a job-based experience abroad, with measurable outcomes and deliverables.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-12 md:col-span-6 lg:col-span-3">
+            <div class="bg-paper rounded-xl shadow-soft p-6 h-full">
+              <p class="text-sm font-semibold tracking-wideish text-moss">Financial</p>
+              <h3 class="mt-2 text-lg font-display">Autonomy</h3>
+              <p class="mt-3 text-slate">
+                Self-fund the year, manage budget and logistics, and build independence through responsibility.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-12 md:col-span-6 lg:col-span-3">
+            <div class="bg-paper rounded-xl shadow-soft p-6 h-full">
+              <p class="text-sm font-semibold tracking-wideish text-moss">Language</p>
+              <h3 class="mt-2 text-lg font-display">Professional English</h3>
+              <p class="mt-3 text-slate">
+                Improve fluency in real workplace situations: meetings, reporting, collaboration, and daily communication.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-span-12 md:col-span-6 lg:col-span-3">
+            <div class="bg-paper rounded-xl shadow-soft p-6 h-full">
+              <p class="text-sm font-semibold tracking-wideish text-moss">Growth</p>
+              <h3 class="mt-2 text-lg font-display">Adaptability</h3>
+              <p class="mt-3 text-slate">
+                Build resilience and maturity in a new environment—skills that translate directly to engineering leadership.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE -->
+      <section class="grid grid-cols-12 gap-8 items-start">
+        <div class="col-span-12 lg:col-span-5">
+          <h2 class="text-2xl font-display">Timeline</h2>
+          <p class="mt-2 text-slate">
+            A simple 3-step plan: preparation, the gap year itself, then return to school with a stronger profile.
+          </p>
+        </div>
+
+        <div class="col-span-12 lg:col-span-7">
+          <div class="bg-paper rounded-xl shadow-soft p-6 md:p-8">
+            <div class="space-y-6">
+              <div class="rounded-xl border border-moss/20 p-5">
+                <h3 class="text-lg font-display">1) Preparation</h3>
+                <p class="mt-2 text-slate">
+                  Define target role (dev internship vs job), update CV/portfolio, apply, and plan admin (visa, insurance, housing).
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-moss/20 p-5">
+                <h3 class="text-lg font-display">2) Gap year abroad</h3>
+                <p class="mt-2 text-slate">
+                  Work full-time, improve English daily, and document outcomes (projects, skills, achievements) for the portfolio.
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-moss/20 p-5">
+                <h3 class="text-lg font-display">3) Return to engineering school</h3>
+                <p class="mt-2 text-slate">
+                  Reinvest the experience into academic projects, internships, and career development with clearer direction.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRACTICAL / NEXT STEPS + CTA -->
+      <section class="grid grid-cols-12 gap-8 items-start">
+        <div class="col-span-12 lg:col-span-8">
+          <div class="bg-paper rounded-xl shadow-soft p-6 md:p-8">
+            <h2 class="text-2xl font-display">Practical details & next steps</h2>
+
+            <ul class="mt-5 list-disc list-inside text-slate space-y-2">
+              <li><strong>Destinations:</strong> Canada (dev internship focus) or Australia (work + immersion focus).</li>
+              <li><strong>Positioning:</strong> software development / systems / applied projects (e.g., long-term Voxel project).</li>
+              <li><strong>Logistics:</strong> visa timeline, insurance, housing strategy, budget forecast.</li>
+              <li><strong>Output:</strong> documented experience integrated into this e-portfolio (projects, learnings, results).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-span-12 lg:col-span-4">
+          <div class="bg-paper rounded-xl shadow-soft p-6 md:p-8">
+            <h3 class="text-xl font-display">Quick links (optional)</h3>
+            <p class="mt-2 text-slate">
+              Add links here later (companies list, application tracker, country resources).
+            </p>
+
+            <div class="mt-6 space-y-3">
+              <a class="block text-center px-5 py-2 rounded-lg border border-moss/20 hover:bg-moss hover:text-paper transition-colors"
+                 href="#" aria-disabled="true">
+                Canada plan (soon)
+              </a>
+              <a class="block text-center px-5 py-2 rounded-lg border border-moss/20 hover:bg-moss hover:text-paper transition-colors"
+                 href="#" aria-disabled="true">
+                Australia plan (soon)
+              </a>
+              <a class="block text-center px-5 py-2 rounded-lg border border-moss/20 hover:bg-moss hover:text-paper transition-colors"
+                 href="#" aria-disabled="true">
+                Application tracker (soon)
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+  </main>
+
+  <!-- Bottom warning band -->
+  <div class="fixed inset-x-0 bottom-0 z-50 px-6 py-2 text-center text-sm text-slate bg-paper border-t border-moss">
+    <p>This website was not developed for mobile devices.</p>
+  </div>
 </body>
 </html>
