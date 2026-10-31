@@ -1,0 +1,89 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Abel Fares — R&D Engineering Portfolio | Computer Vision, 3D Graphics & Scientific Computing',
+  description = 'Interactive R&D Engineering Portfolio of Abel Fares (ENSEEIHT / N7). Featuring C++17 Dark Channel Prior Dehazing, Custom Java/OpenGL Voxel Engine with Cascaded Shadow Mapping, 3D Collective Behavior Particle Simulation, and SIGGRAPH MAPS Progressive 3D Mesh Compression.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="lab-grid-bg min-h-screen antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+    <!-- Top Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-indigo-500 flex items-center justify-center text-slate-950 font-mono font-bold text-sm shadow-lg shadow-cyan-500/20">
+            AF
+          </div>
+          <div>
+            <span class="font-bold text-white tracking-tight text-sm sm:text-base">Abel Fares</span>
+            <span class="hidden sm:inline-block ml-2 text-xs font-mono text-cyan-400 bg-cyan-950/70 border border-cyan-800/60 px-2 py-0.5 rounded">
+              R&D Lab Portfolio
+            </span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-xs font-mono text-slate-300">
+          <a href="/#dehazing" class="hover:text-cyan-400 transition">01. Dehazing (C++17)</a>
+          <a href="/#voxel" class="hover:text-indigo-400 transition">02. Voxel Engine (OpenGL)</a>
+          <a href="/#boids" class="hover:text-emerald-400 transition">03. 3D Fish Sim (SciPy)</a>
+          <a href="/#maps" class="hover:text-amber-400 transition">04. MAPS 3D Compression</a>
+          <a href="/#systems" class="hover:text-cyan-400 transition">05. Segmentation & Systems</a>
+          <a href="/#matrix" class="hover:text-white transition">Stack Matrix</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="https://github.com/abelfares17"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-slate-200 transition"
+          >
+            github.com/abelfares17 ↗
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="border-t border-slate-800/80 bg-slate-950/90 py-12 mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
+        <div>
+          Abel Fares — Final-Year Computer Science & Applied Mathematics Engineering Student (ENSEEIHT / N7)
+        </div>
+        <div class="flex items-center gap-4">
+          <span>Target: 6-Month R&D Internship (From March/April 2027)</span>
+          <span>•</span>
+          <a href="https://github.com/abelfares17" class="text-cyan-400 hover:underline">GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

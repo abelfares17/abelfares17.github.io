@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #07090e;
+    --bg-secondary: #0d111a;
+    --bg-card: rgba(16, 22, 34, 0.72);
+    --border-subtle: rgba(148, 163, 184, 0.14);
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent-cyan: #22d3ee;
+    --accent-indigo: #818cf8;
+    --accent-emerald: #34d399;
+  }
+
+  html.light {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --border-subtle: rgba(15, 23, 42, 0.12);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-cyan: #0891b2;
+    --accent-indigo: #4f46e5;
+    --accent-emerald: #059669;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, monospace;
+  }
+}
+
+.lab-grid-bg {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.75rem 0;
+}

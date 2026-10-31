@@ -1,0 +1,33 @@
+{
+  "name": "abel-fares-rd-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "XDG_CONFIG_HOME=/tmp ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "start": "XDG_CONFIG_HOME=/tmp ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "XDG_CONFIG_HOME=/tmp ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "XDG_CONFIG_HOME=/tmp ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "astro": "XDG_CONFIG_HOME=/tmp ASTRO_TELEMETRY_DISABLED=1 astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.1.0",
+    "@astrojs/react": "^4.2.0",
+    "@tailwindcss/vite": "4.0.9",
+    "astro": "^5.3.0",
+    "katex": "^0.16.21",
+    "lucide-react": "^0.475.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "tailwindcss": "4.0.9",
+    "three": "^0.173.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.173.0",
+    "typescript": "^5.7.3"
+  }
+}
