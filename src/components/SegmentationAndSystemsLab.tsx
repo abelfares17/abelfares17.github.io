@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Scan, Binary, Terminal, FileCode } from 'lucide-react';
+import { Scan, Binary, Terminal, Github, ExternalLink } from 'lucide-react';
 
 const SEG_CASES = [
   {
@@ -166,8 +166,20 @@ export default function SegmentationAndSystemsLab() {
       <div className="rounded-2xl border border-slate-800/80 bg-slate-900/75 backdrop-blur-md p-5 md:p-7 shadow-xl text-slate-100">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-slate-800">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-amber-400 bg-amber-950/60 border border-amber-800/50 px-3 py-1 rounded-full mb-2">
-              <Scan className="w-3.5 h-3.5" /> C++17 / OpenCV Segmentation (`Traitement_Image`)
+            <div className="flex flex-wrap items-center gap-2 mb-2">
+              <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-amber-400 bg-amber-950/60 border border-amber-800/50 px-3 py-1 rounded-full">
+                <Scan className="w-3.5 h-3.5" /> C++17 / OpenCV Segmentation (`Traitement_Image`)
+              </div>
+              <a
+                href="https://github.com/mhourde/Traitement_Image"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white transition"
+              >
+                <Github className="w-3.5 h-3.5 text-amber-400" />
+                <span>mhourde/Traitement_Image</span>
+                <ExternalLink className="w-3 h-3 text-slate-400" />
+              </a>
             </div>
             <h3 className="text-xl font-bold text-white">
               Spatial-Color K-Means $(B, G, R, \lambda x, \lambda y)$ vs. Mean-Shift & Otsu Masks
@@ -224,8 +236,20 @@ export default function SegmentationAndSystemsLab() {
         {/* Ada Bit-Level Huffman Encoder */}
         <div className="rounded-2xl border border-slate-800/80 bg-slate-900/75 backdrop-blur-md p-5 shadow-xl text-slate-100 flex flex-col justify-between">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-full mb-2">
-              <Binary className="w-3.5 h-3.5" /> Ada Systems Programming (`ADA_huffman_compression`)
+            <div className="flex items-center justify-between gap-2 mb-2">
+              <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-full">
+                <Binary className="w-3.5 h-3.5" /> Ada Systems (`ADA_huffman_compression`)
+              </div>
+              <a
+                href="https://github.com/abelfares17/ADA_huffman_compression"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-mono bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-emerald-300 hover:text-white transition"
+              >
+                <Github className="w-3.5 h-3.5" />
+                <span>Repo</span>
+                <ExternalLink className="w-3 h-3 text-slate-400" />
+              </a>
             </div>
             <h4 className="text-lg font-bold text-white">Interactive `.hff` Bit-Stream Encoder</h4>
             <p className="text-xs text-slate-400 mt-1 mb-4">
@@ -270,9 +294,21 @@ export default function SegmentationAndSystemsLab() {
         {/* OCaml RAT Multi-Pass Compiler Explorer */}
         <div className="rounded-2xl border border-slate-800/80 bg-slate-900/75 backdrop-blur-md p-5 shadow-xl text-slate-100 flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between gap-2 mb-2">
-              <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-indigo-400 bg-indigo-950/60 border border-indigo-800/50 px-3 py-1 rounded-full">
-                <Terminal className="w-3.5 h-3.5" /> OCaml Compiler (`TDL` — RAT to TAM)
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <div className="flex items-center gap-2">
+                <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-indigo-400 bg-indigo-950/60 border border-indigo-800/50 px-3 py-1 rounded-full">
+                  <Terminal className="w-3.5 h-3.5" /> OCaml Compiler (`TDL` — RAT to TAM)
+                </div>
+                <a
+                  href="https://github.com/abelfares17/TDL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-mono bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-indigo-300 hover:text-white transition"
+                >
+                  <Github className="w-3.5 h-3.5" />
+                  <span>Repo</span>
+                  <ExternalLink className="w-3 h-3 text-slate-400" />
+                </a>
               </div>
               <div className="flex gap-1">
                 {RAT_SNIPPETS.map((s, idx) => (

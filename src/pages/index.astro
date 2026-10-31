@@ -1,9 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import DehazingExplorer from '../components/DehazingExplorer';
-import VoxelMeshingLab from '../components/VoxelMeshingLab';
-import FishSchoolSim3D from '../components/FishSchoolSim3D';
-import MapsProgressiveMesh3D from '../components/MapsProgressiveMesh3D';
+import FeaturedProjectsHub from '../components/FeaturedProjectsHub';
 import SegmentationAndSystemsLab from '../components/SegmentationAndSystemsLab';
 ---
 
@@ -28,10 +25,10 @@ import SegmentationAndSystemsLab from '../components/SegmentationAndSystemsLab';
 
           <div class="flex flex-wrap gap-3 pt-2">
             <a
-              href="#dehazing"
+              href="#featured-projects"
               class="px-5 py-2.5 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-mono font-bold text-xs sm:text-sm transition shadow-lg shadow-cyan-500/20"
             >
-              Explore Interactive R&D Labs ↓
+              Explore Primary R&D Case Studies ↓
             </a>
             <a
               href="https://github.com/abelfares17"
@@ -69,7 +66,7 @@ import SegmentationAndSystemsLab from '../components/SegmentationAndSystemsLab';
               <div class="text-cyan-300 font-semibold mt-0.5">C++17 • OpenCV • Eigen • OpenMP • Java/OpenGL • GLSL • Python (NumPy/SciPy)</div>
             </div>
             <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/80">
-              <div class="text-slate-400">Current 3A Specialization</div>
+              <div class="text-slate-400">Current 3A Coursework</div>
               <div class="text-indigo-300 font-semibold mt-0.5">3D Inverse Problems, Photogrammetry, Progressive Mesh Compression (MAPS)</div>
             </div>
             <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/80">
@@ -82,257 +79,168 @@ import SegmentationAndSystemsLab from '../components/SegmentationAndSystemsLab';
     </div>
   </section>
 
-  <!-- TIER 1: PROJECT 01 — SINGLE IMAGE DEHAZING (C++17 / OPENCV / EIGEN / OPENMP) -->
-  <section id="dehazing" class="py-20 border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-        <div class="space-y-3 max-w-3xl">
-          <div class="flex items-center gap-3 text-xs font-mono">
-            <span class="px-2.5 py-1 rounded bg-cyan-500/20 border border-cyan-400/50 text-cyan-300 font-bold">
-              TIER 1 — CASE STUDY 01
-            </span>
-            <span class="text-slate-400">C++17 • OpenCV 4 • Eigen 3 Sparse • OpenMP</span>
-            <a
-              href="https://github.com/abelfares17/Projet_Image"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-cyan-400 hover:underline"
-            >
-              github.com/abelfares17/Projet_Image ↗
-            </a>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-            Single-Image Haze Removal via Dark Channel Prior & Sparse Laplacian Soft Matting
-          </h2>
-          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Full C++17 implementation of He et al. (CVPR 2009) atmospheric scattering inversion, enhanced with <strong>CIE L*a*b* atmospheric light estimation</strong> (median luminance <code class="text-cyan-300">L*</code> + extrapolated veil chrominance <code class="text-cyan-300">a*, b*</code> to reject warm foreground bias). Features OpenMP-parallelized construction of the sparse Matting Laplacian <code class="text-cyan-300">(L + λI)t = λt̃</code> solved with Eigen, 4× downsampling + guided-filter upsampling, Beer-Lambert depth recovery, and full O-HAZE / RESIDE evaluation suites.
-          </p>
-        </div>
+  <!-- TIER 1: FEATURED R&D CASE STUDIES HUB (CARDS + EXPANDABLE DETAILS & LABS) -->
+  <FeaturedProjectsHub client:load />
 
-        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 text-xs font-mono space-y-1.5 shrink-0">
-          <div class="text-slate-400 uppercase text-[10px]">Attribution & Verification</div>
-          <div class="text-white"><strong>Role:</strong> Primary Author (17/20 commits, 3,618 LOC)</div>
-          <div class="text-slate-300"><strong>Owned:</strong> Dark Channel, Atmospheric Light, Eigen/OpenMP Soft Matting, Metrics & Benchmarks</div>
-          <div class="text-slate-400"><strong>Collaborator:</strong> M. Hourde (Scene Recovery & Initial Depth Map)</div>
-        </div>
-      </div>
-
-      <!-- Mathematical Formulation Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-          <div class="text-xs font-mono text-cyan-400 uppercase mb-1">1. Koschmieder Scattering Model</div>
-          <div class="text-sm font-mono text-white bg-slate-950 p-2.5 rounded border border-slate-800 my-2">
-            I(x) = J(x)·t(x) + A·(1 - t(x))
-          </div>
-          <p class="text-xs text-slate-400">
-            Relates observed hazy image <code class="text-slate-200">I(x)</code> to true scene radiance <code class="text-slate-200">J(x)</code>, global atmospheric light <code class="text-slate-200">A</code>, and medium transmission <code class="text-slate-200">t(x) = exp(-β·d(x))</code>.
-          </p>
-        </div>
-
-        <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-          <div class="text-xs font-mono text-indigo-400 uppercase mb-1">2. Sparse Matting Laplacian (Eigen + OpenMP)</div>
-          <div class="text-sm font-mono text-white bg-slate-950 p-2.5 rounded border border-slate-800 my-2">
-            (L + λI) · t = λ · t̃
-          </div>
-          <p class="text-xs text-slate-400">
-            Eliminates block-erosion halo artifacts around depth discontinuities using Levin’s local window covariance matrix <code class="text-indigo-300">L_ij</code>, parallelized across CPU threads via OpenMP.
-          </p>
-        </div>
-
-        <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
-          <div class="text-xs font-mono text-emerald-400 uppercase mb-1">3. Radiance Inversion & Depth Map</div>
-          <div class="text-sm font-mono text-white bg-slate-950 p-2.5 rounded border border-slate-800 my-2">
-            J(x) = (I(x) - A) / max(t(x), t₀) + A
-          </div>
-          <p class="text-xs text-slate-400">
-            Regularized by transmission floor <code class="text-slate-200">t₀ = 0.20</code> to prevent noise amplification in dense haze, with depth recovered up to scale via <code class="text-slate-200">d(x) = -ln(t)/β</code>.
-          </p>
-        </div>
-      </div>
-
-      <!-- Interactive Component -->
-      <DehazingExplorer client:load />
-    </div>
-  </section>
-
-  <!-- TIER 1: PROJECT 02 — VOXEL ENGINE (JAVA 17 / OPENGL / GLSL) -->
-  <section id="voxel" class="py-20 border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-        <div class="space-y-3 max-w-3xl">
-          <div class="flex items-center gap-3 text-xs font-mono">
-            <span class="px-2.5 py-1 rounded bg-indigo-500/20 border border-indigo-400/50 text-indigo-300 font-bold">
-              TIER 1 — CASE STUDY 02
-            </span>
-            <span class="text-slate-400">Java 17 • OpenGL 3.2 Core • GLSL • LWJGL 3 • Multithreading</span>
-            <a
-              href="https://github.com/abelfares17/Voxel_Project"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-indigo-400 hover:underline"
-            >
-              github.com/abelfares17/Voxel_Project ↗
-            </a>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-            Custom 3D Voxel Engine — Greedy Meshing, Quad Indexing & Cascaded Shadow Mapping
-          </h2>
-          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
-            A 100% personal 3D voxel engine engineered from scratch on top of LWJGL/OpenGL. Implements worker-thread pool chunk meshing, greedy surface merging, compact vertex formatting with shared EBO quad indexing, a 3-cascade (2048²) directional shadow-mapping pipeline with light-volume caster culling, and a physically-inspired celestial day/night cycle.
-          </p>
-        </div>
-
-        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 text-xs font-mono space-y-1.5 shrink-0">
-          <div class="text-slate-400 uppercase text-[10px]">Attribution & Verification</div>
-          <div class="text-emerald-400 font-bold">100% Personal Project (Sole Author)</div>
-          <div class="text-slate-300"><strong>Hardware Benchmarked:</strong> Apple M2 Pro (Retina 2268×1382)</div>
-          <div class="text-slate-400"><strong>Measured Gain:</strong> 43.05 → 61.53 FPS (+42.9% via EBO + Compact Verts)</div>
-        </div>
-      </div>
-
-      <!-- Interactive Component -->
-      <VoxelMeshingLab client:visible />
-    </div>
-  </section>
-
-  <!-- TIER 1: PROJECT 03 — 3D COLLECTIVE BEHAVIOR SIMULATION (PROJET_MOD_GEOM) -->
-  <section id="boids" class="py-20 border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-        <div class="space-y-3 max-w-3xl">
-          <div class="flex items-center gap-3 text-xs font-mono">
-            <span class="px-2.5 py-1 rounded bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-bold">
-              TIER 1 — CASE STUDY 03
-            </span>
-            <span class="text-slate-400">Python • NumPy Vectorization • SciPy cKDTree • Computational Geometry</span>
-            <a
-              href="https://github.com/abelfares17/Projet_mod_geom"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-emerald-400 hover:underline"
-            >
-              github.com/abelfares17/Projet_mod_geom ↗
-            </a>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-            3D Fish-School Geometric Modeling — From Aoki Zones to Topological KD-Trees & Vision Cones
-          </h2>
-          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
-            A 5-stage scientific simulation exploring how local geometric perception rules generate macroscopic self-organization in 3D space. Compares metric interaction spheres (Aoki 1982), wave-like behavioral contagion (Trafalgar effect), scale-free topological $k$-nearest neighbor interactions accelerated via <code class="text-emerald-300">scipy.spatial.cKDTree</code>, and forward field-of-view cone filtering (<code class="text-emerald-300">np.einsum</code>). Both physics and 3D Matplotlib rendering are fully vectorized in NumPy with <code class="text-emerald-300">copy_from_bbox</code> / <code class="text-emerald-300">blit</code> acceleration.
-          </p>
-        </div>
-
-        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 text-xs font-mono space-y-1.5 shrink-0">
-          <div class="text-slate-400 uppercase text-[10px]">Attribution & Optimizations</div>
-          <div class="text-white"><strong>Role:</strong> Lead Author (7/8 commits + Vectorization Pass)</div>
-          <div class="text-slate-300"><strong>Physics:</strong> Tensorized <code class="text-emerald-300">(N,N,3)</code> & <code class="text-emerald-300">einsum</code> vision cone</div>
-          <div class="text-slate-400"><strong>Renderer:</strong> Vectorized 10-tri mesh + Matplotlib Blitting</div>
-        </div>
-      </div>
-
-      <!-- Interactive Component -->
-      <FishSchoolSim3D client:visible />
-    </div>
-  </section>
-
-  <!-- TIER 1: PROJECT 04 — 3A RESEARCH PROJECT: MAPS PROGRESSIVE 3D MESH COMPRESSION -->
-  <section id="maps" class="py-20 border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-        <div class="space-y-3 max-w-3xl">
-          <div class="flex items-center gap-3 text-xs font-mono">
-            <span class="px-2.5 py-1 rounded bg-amber-500/20 border border-amber-400/50 text-amber-300 font-bold">
-              TIER 1 — CASE STUDY 04 (3A RESEARCH PROJECT)
-            </span>
-            <span class="text-slate-400">Python • NumPy • SciPy • Computational Topology • SIGGRAPH ’98</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-            Progressive 3D Mesh Compression (`.obj` → `.obja`) via MAPS Multiresolution Hierarchy
-          </h2>
-          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Implementation of the seminal <strong>MAPS (Multiresolution Adaptive Parameterization of Surfaces, Lee et al., SIGGRAPH ’98)</strong> pipeline to stream arbitrary 3D triangle meshes under a strict bitrate-distortion tradeoff. Combines Dobkin-Kirkpatrick independent-set decimation, local conformal 1-ring flattening <code class="text-amber-300">μ_u(p_jk) = r_k^a · exp(i·a·θ_k)</code>, constrained planar re-triangulation, and Loop 1:4 subdivision with bijection tracking <code class="text-amber-300">Π^l</code>.
-          </p>
-        </div>
-
-        <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-4 text-xs font-mono space-y-1.5 shrink-0">
-          <div class="text-slate-400 uppercase text-[10px]">Attribution (`maps_core/p1_hierarchy.py`)</div>
-          <div class="text-white"><strong>Module Owner:</strong> Hierarchy & Geometric Priorities (P1)</div>
-          <div class="text-slate-300"><strong>Key Work:</strong> Pure NumPy vectorization of w(λ, u), DK independent set, CCW 1-ring ordering & error E(t)</div>
-        </div>
-      </div>
-
-      <!-- Interactive Component -->
-      <MapsProgressiveMesh3D client:visible />
-    </div>
-  </section>
-
-  <!-- TIER 2: SEGMENTATION, COMPILERS & SYSTEMS ENGINEERING -->
+  <!-- TIER 2: SEGMENTATION, COMPILERS & FULL-STACK SYSTEMS -->
   <section id="systems" class="py-20 border-b border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
       <div class="space-y-3 max-w-3xl">
         <div class="flex items-center gap-3 text-xs font-mono">
           <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700 text-cyan-300 font-bold">
-            TIER 2 — VISION, COMPILERS & LOW-LEVEL SYSTEMS
+            TIER 2 — SYSTEMS, COMPILERS & FULL-STACK ENGINEERING
           </span>
-          <span class="text-slate-400">C++17 • Ada • OCaml • MATLAB • Java Concurrency</span>
+          <span class="text-slate-400">C++17 • Ada • OCaml • Java 21 / Spring Boot 4 • React 19</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-          Image Segmentation, Bit-Level Compression & Multi-Pass Compiler Engineering
+          Image Segmentation, Bit-Level Compression, Compilers & Full-Stack Systems
         </h2>
         <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
-          Complementary academic and systems engineering artifacts demonstrating versatility across classical clustering/segmentation (`Traitement_Image`), binary stream encoding in Ada (`ADA_huffman_compression`), and static analysis / code generation in OCaml (`TDL`).
+          Complementary systems engineering artifacts demonstrating breadth across classical segmentation (<a href="https://github.com/mhourde/Traitement_Image" target="_blank" class="text-amber-300 hover:underline"><code>Traitement_Image</code></a>), bitstream binary encoding in Ada (<a href="https://github.com/abelfares17/ADA_huffman_compression" target="_blank" class="text-emerald-300 hover:underline"><code>ADA_huffman_compression</code></a>), multi-pass compiler construction in OCaml (<a href="https://github.com/abelfares17/TDL" target="_blank" class="text-indigo-300 hover:underline"><code>TDL</code></a>), and distributed real-time web engineering (<a href="https://github.com/b-cb/Projet_Appliweb" target="_blank" class="text-cyan-300 hover:underline"><code>Projet_Appliweb</code></a>).
         </p>
       </div>
 
       <SegmentationAndSystemsLab client:visible />
 
-      <!-- Additional Software & Systems Projects Compact Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-4">
-        <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between text-xs font-mono text-cyan-400 mb-2">
-              <span>3D Inverse Problems & Signal</span>
-              <span>MATLAB</span>
+      <!-- Full-Stack Real-Time Technical Proof: Projet_Appliweb -->
+      <div class="rounded-2xl border border-slate-800 bg-gradient-to-b from-slate-900/90 to-slate-950/90 p-6 sm:p-8 shadow-2xl space-y-6">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+          <div class="space-y-1.5">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-mono uppercase tracking-wider text-indigo-400 bg-indigo-950/70 border border-indigo-800/60 px-3 py-1 rounded-full font-bold">
+                Full-Stack Technical Proof
+              </span>
+              <span class="text-xs font-mono text-slate-400 bg-slate-900 px-2.5 py-1 rounded-full border border-slate-800">
+                Java 21 • Spring Boot 4 • React 19 • STOMP / WebSocket
+              </span>
             </div>
-            <h4 class="text-base font-bold text-white">Photogrammetry, Total-Variation Inpainting & Active Contours (`TAV_TP` & `PI3D`)</h4>
-            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-              Practical implementations of total-variation denoising/inpainting, patch-based restoration, Gradient Vector Flow active contours, spectral audio fingerprinting, and 3A multi-view 3D reconstruction coursework.
+            <h3 class="text-2xl font-extrabold text-white tracking-tight">
+              Multiplayer Real-Time Card Platform: Coinche & Tarot (<code class="text-indigo-300 font-mono text-xl">Projet_Appliweb</code>)
+            </h3>
+            <p class="text-sm text-slate-300 max-w-4xl leading-relaxed">
+              Full-stack multiplayer gaming system supporting Coinche and Tarot with an event-driven STOMP/WebSocket synchronization architecture, stateless Spring Security JWT authentication, relational persistence, and heuristic rule-based AI bots.
             </p>
           </div>
-          <a href="https://github.com/abelfares17/TAV_TP" target="_blank" class="mt-4 text-xs font-mono text-cyan-400 hover:underline">
-            View Repository (abelfares17/TAV_TP) ↗
+
+          <a
+            href="https://github.com/b-cb/Projet_Appliweb"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-mono font-bold text-xs sm:text-sm transition shadow-lg shadow-indigo-600/20 whitespace-nowrap self-start lg:self-center"
+          >
+            <span>View Repository (b-cb/Projet_Appliweb)</span>
+            <span>↗</span>
           </a>
         </div>
 
-        <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between text-xs font-mono text-indigo-400 mb-2">
-              <span>Full-Stack Real-Time Web</span>
-              <span>Spring Boot 4 / React 19</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- Column 1: Backend & Security -->
+          <div class="rounded-xl border border-slate-800/80 bg-slate-950/70 p-5 space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono text-indigo-400 border-b border-slate-800/60 pb-2">
+              <span class="font-bold">Backend & Security</span>
+              <span>Java 21 / Spring Boot 4</span>
             </div>
-            <h4 class="text-base font-bold text-white">Multiplayer Card-Game Prototype (`Projet_Appliweb`)</h4>
-            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-              Academic local prototype supporting Coinche and Tarot with Java 21, Spring Security JWT authentication, STOMP/WebSocket state synchronization, rule-based bots, JPA/H2 persistence, and integration tests.
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Stateless JWT authentication filter (<code class="text-indigo-300">JwtAuthFilter</code>, <code class="text-indigo-300">JwtService</code>) guarding REST endpoints and STOMP handshakes.
             </p>
+            <ul class="text-xs font-mono text-slate-400 space-y-1.5 pt-1">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                <span>STOMP broker at <code class="text-slate-300">/ws</code> endpoint</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                <span>Topic broadcast: <code class="text-slate-300">/topic/partie/&#123;id&#125;</code></span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                <span>Spring Data JPA + H2 relational persistence</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                <span>Integration testing with MockMvc & WebSockets</span>
+              </li>
+            </ul>
           </div>
-          <a href="https://github.com/b-cb/Projet_Appliweb" target="_blank" class="mt-4 text-xs font-mono text-indigo-400 hover:underline">
-            View Repository (b-cb/Projet_Appliweb) ↗
-          </a>
+
+          <!-- Column 2: Game Engine & AI Bots -->
+          <div class="rounded-xl border border-slate-800/80 bg-slate-950/70 p-5 space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono text-cyan-400 border-b border-slate-800/60 pb-2">
+              <span class="font-bold">Game Engine & Bots</span>
+              <span>Tarot & Coinche Rules</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Deterministic state machines enforcing official card mechanics, legal trick constraints, and autonomous bot behaviors.
+            </p>
+            <ul class="text-xs font-mono text-slate-400 space-y-1.5 pt-1">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                <span>Tarot for 3–5 players, Chien & Roi calls</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                <span>Coinche: Capot, Surcoinche, Belote</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                <span>Trump obligation & cut validation engine</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                <span>Rule-based AI bots for solo or mixed matches</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Frontend & Real-Time Sync -->
+          <div class="rounded-xl border border-slate-800/80 bg-slate-950/70 p-5 space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono text-emerald-400 border-b border-slate-800/60 pb-2">
+              <span class="font-bold">Frontend & Live Sync</span>
+              <span>React 19 / Vite 8</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Reactive table visualization with dynamic bidding overlays, interactive card hands, and sub-millisecond state updates.
+            </p>
+            <ul class="text-xs font-mono text-slate-400 space-y-1.5 pt-1">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>STOMP.js 7 live state subscription</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>Interactive bidding panels & Chien modal</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>Live in-game chat panel with broadcast</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>Final contract score & Oudlers calculation</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="rounded-xl border border-slate-800 bg-slate-900/60 p-5 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between text-xs font-mono text-emerald-400 mb-2">
-              <span>Graphics & Concurrency</span>
-              <span>Java / Make</span>
-            </div>
-            <h4 class="text-base font-bold text-white">DIY Software Renderer (`UE_Computer_Graphics`) & Parallel Systems (`Sys_concurrents`)</h4>
-            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-              Extensible Java 3D software rasterizer with custom shader abstraction, wireframe/face modes, lighting and normal visualization; paired with monitor, Fork/Join, and CSP concurrency coursework.
-            </p>
+        <!-- Telemetry Tags -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-800/80 text-xs font-mono text-slate-400">
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Java 21</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Spring Boot 4</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Spring Security JWT</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">STOMP / WebSocket</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">React 19</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Vite 8</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Spring Data JPA / H2</span>
+            <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-slate-300">Rule-Based AI Bots</span>
           </div>
-          <a href="https://github.com/abelfares17/UE_Computer_Graphics" target="_blank" class="mt-4 text-xs font-mono text-emerald-400 hover:underline">
-            View Repository (UE_Computer_Graphics) ↗
+          <a
+            href="https://github.com/b-cb/Projet_Appliweb"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-indigo-400 hover:text-indigo-300 hover:underline transition"
+          >
+            Explore repository codebase ↗
           </a>
         </div>
       </div>
@@ -385,7 +293,7 @@ import SegmentationAndSystemsLab from '../components/SegmentationAndSystemsLab';
             <li class="flex justify-between"><span>Python 3 & Vectorized NumPy</span><span class="text-emerald-400">High</span></li>
             <li class="flex justify-between"><span>SciPy Spatial (cKDTree)</span><span class="text-emerald-400">High</span></li>
             <li class="flex justify-between"><span>3D Particle & Swarm Physics</span><span class="text-emerald-400">High</span></li>
-            <li class="flex justify-between"><span>MATLAB Signal / Inverse 3D</span><span class="text-cyan-400">Coursework</span></li>
+            <li class="flex justify-between"><span>Computational Geometry & Mesh</span><span class="text-emerald-400">High</span></li>
             <li class="flex justify-between"><span>Conformal Parameterization</span><span class="text-emerald-400">High</span></li>
             <li class="flex justify-between"><span>Matplotlib 3D (`Poly3DCollection`)</span><span class="text-emerald-400">High</span></li>
           </ul>
