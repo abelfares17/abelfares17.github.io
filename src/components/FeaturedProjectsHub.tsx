@@ -7,12 +7,15 @@ import {
   Layers,
   Sparkles,
   ArrowRight,
+  ShieldCheck,
+  Zap,
 } from 'lucide-react';
 
 import DehazingExplorer from './DehazingExplorer';
 import VoxelMeshingLab from './VoxelMeshingLab';
 import FishSchoolSim3D from './FishSchoolSim3D';
 import MapsProgressiveMesh3D from './MapsProgressiveMesh3D';
+import NarutoYoloMudrasLab from './NarutoYoloMudrasLab';
 
 export interface ProjectSpec {
   id: string;
@@ -26,7 +29,7 @@ export interface ProjectSpec {
   attributionRole: string;
   attributionDetails: string[];
   githubUrl?: string;
-  accentColor: 'cyan' | 'indigo' | 'emerald' | 'amber';
+  accentColor: 'cyan' | 'indigo' | 'emerald' | 'amber' | 'orange';
   coverImage?: string;
   highlights: string[];
 }
@@ -138,6 +141,33 @@ const PROJECTS: ProjectSpec[] = [
       'Bitrate-Distortion Hierarchy',
     ],
   },
+  {
+    id: 'naruto_yolo',
+    tierBadge: 'TIER 1 — CASE STUDY 05',
+    number: '05',
+    title: 'YOLOv11 Naruto Hand-Sign Recognition & Jutsu Engine',
+    subtitle: 'Zodiac Mudrās Detection, C++ Pipeline & 500-Epoch Fine-Tuning (PyTorch / Ultralytics / OpenCV)',
+    shortDesc:
+      'End-to-end computer vision and deep learning system recognizing 12 Naruto hand seals in real-time with 99.50% mAP@50 and an interactive Jutsu sequence engine.',
+    fullDesc:
+      'End-to-end computer vision and applied deep learning project recognizing the 12 Naruto zodiac mudrās in real-time. Built upon a private homemade dataset of 412 photos annotated with CVAT under strict tight-box guidelines, verified via custom C++17/OpenCV bounding-box projection and stratified 80/10/10 splitting. Fine-tuned with YOLOv11 Medium across 500 epochs on Google Colab with an automated multi-day session recovery script, achieving 99.50% mAP@50, 91.69% mAP@50-95, and 100% precision on 11/12 classes.',
+    stackPills: ['YOLOv11m', 'PyTorch', 'C++17 Pipeline', 'CVAT Docker', 'Colab GPU', 'mAP@50: 99.5%'],
+    attributionRole: 'Co-Author (Dataset Acquisition, C++ Split & Verification, YOLOv11 Tuning)',
+    attributionDetails: [
+      'Dataset: 412 homemade images, 12 zodiac classes, multi-subject & lighting variations',
+      'Engineering: Custom C++17 OpenCV scripts for tight-box verification & stratified partitioning',
+      'Training: 500 epochs YOLOv11m with automated 3-day Colab recovery script & cosine lr scheduler',
+      'Performance: 99.50% mAP@50, 91.69% mAP@50-95, 98.25% Precision, 98.18% Recall',
+    ],
+    accentColor: 'orange',
+    coverImage: '/assets/naruto_yolo/naruto_yolo_preview.jpg',
+    highlights: [
+      'YOLOv11m 500-Epoch Fine-Tuning',
+      '99.50% mAP@50 Benchmark',
+      'C++ Stratified Data Split',
+      'Interactive Jutsu State Machine',
+    ],
+  },
 ];
 
 export default function FeaturedProjectsHub() {
@@ -238,13 +268,14 @@ export default function FeaturedProjectsHub() {
           </div>
         </div>
 
-        {/* 4-Card Responsive Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* 5-Card Responsive Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROJECTS.map((project, idx) => {
             const isCyan = project.accentColor === 'cyan';
             const isIndigo = project.accentColor === 'indigo';
             const isEmerald = project.accentColor === 'emerald';
             const isAmber = project.accentColor === 'amber';
+            const isOrange = project.accentColor === 'orange';
 
             const borderHoverClass = isCyan
               ? 'hover:border-cyan-500/60 hover:shadow-cyan-500/10'
@@ -252,6 +283,8 @@ export default function FeaturedProjectsHub() {
               ? 'hover:border-indigo-500/60 hover:shadow-indigo-500/10'
               : isEmerald
               ? 'hover:border-emerald-500/60 hover:shadow-emerald-500/10'
+              : isOrange
+              ? 'hover:border-orange-500/60 hover:shadow-orange-500/10'
               : 'hover:border-amber-500/60 hover:shadow-amber-500/10';
 
             const badgeBgClass = isCyan
@@ -260,6 +293,8 @@ export default function FeaturedProjectsHub() {
               ? 'bg-indigo-500/10 text-indigo-300 border-indigo-500/30'
               : isEmerald
               ? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30'
+              : isOrange
+              ? 'bg-orange-500/10 text-orange-300 border-orange-500/30'
               : 'bg-amber-500/10 text-amber-300 border-amber-500/30';
 
             const textAccentClass = isCyan
@@ -268,6 +303,8 @@ export default function FeaturedProjectsHub() {
               ? 'text-indigo-400'
               : isEmerald
               ? 'text-emerald-400'
+              : isOrange
+              ? 'text-orange-400'
               : 'text-amber-400';
 
             const btnClass = isCyan
@@ -276,6 +313,8 @@ export default function FeaturedProjectsHub() {
               ? 'bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
               : isEmerald
               ? 'bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
+              : isOrange
+              ? 'bg-orange-500/10 hover:bg-orange-500/20 text-orange-300 border-orange-500/40'
               : 'bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border-amber-500/40';
 
             return (
@@ -443,7 +482,7 @@ export default function FeaturedProjectsHub() {
 
               {/* Right: Actions (GitHub & Close) */}
               <div className="flex items-center gap-2 shrink-0">
-                {activeProject.githubUrl && (
+                {activeProject.githubUrl ? (
                   <a
                     href={activeProject.githubUrl}
                     target="_blank"
@@ -452,6 +491,11 @@ export default function FeaturedProjectsHub() {
                   >
                     GitHub ↗
                   </a>
+                ) : (
+                  <span className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-amber-400">
+                    <ShieldCheck className="w-3.5 h-3.5" />
+                    <span>Private Dataset (Privacy Protected)</span>
+                  </span>
                 )}
                 <button
                   type="button"
@@ -474,7 +518,7 @@ export default function FeaturedProjectsHub() {
                     <span className="text-slate-400">
                       {activeProject.stackPills.join(' • ')}
                     </span>
-                    {activeProject.githubUrl && (
+                    {activeProject.githubUrl ? (
                       <a
                         href={activeProject.githubUrl}
                         target="_blank"
@@ -483,6 +527,10 @@ export default function FeaturedProjectsHub() {
                       >
                         {activeProject.githubUrl.replace('https://', '')} ↗
                       </a>
+                    ) : (
+                      <span className="text-amber-400/90 bg-amber-950/60 border border-amber-800/50 px-2 py-0.5 rounded text-[11px] flex items-center gap-1">
+                        <ShieldCheck className="w-3 h-3" /> Private Dataset (Participant Privacy Protected)
+                      </span>
                     )}
                   </div>
                   <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight">
@@ -557,6 +605,7 @@ export default function FeaturedProjectsHub() {
                 {activeProject.id === 'voxel' && <VoxelMeshingLab />}
                 {activeProject.id === 'boids' && <FishSchoolSim3D />}
                 {activeProject.id === 'maps' && <MapsProgressiveMesh3D />}
+                {activeProject.id === 'naruto_yolo' && <NarutoYoloMudrasLab />}
               </div>
 
               {/* Footer Navigation Bar Inside Modal */}
