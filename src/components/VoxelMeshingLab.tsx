@@ -155,14 +155,15 @@ interface VideoClipSpec {
 const VIDEO_SHOWCASES: VideoClipSpec[] = [
   {
     id: 'sunset_night',
-    badge: 'Clip 01 • Celestial Skybox & Twilight',
-    title: 'Sunset to Starry Night Transition (23.5° Orbit)',
+    badge: 'Clip 01 • Celestial Skybox & Extended Horizon',
+    title: 'Sunset to Starry Night Transition over 1.2km LOD Horizon (23.5° Orbit)',
     src: '/assets/voxel/videos/sunset_to_night.mp4',
     poster: '/assets/voxel/voxel_sunset.jpg',
     caption:
-      'Continuous transition from golden-hour directional sunlight to directional twilight scattering, smoothstep shadow deactivation (2°–8° solar elevation), and 512 deterministic stars with lunar shadow handoff.',
-    shaderTech: 'SkyRenderer (Fullscreen gl_VertexID ray reconstruction) + CelestialState.at(worldDays)',
-    javaFlags: '-Dvoxel.startHour=17.4 -Dvoxel.timeScale=60 -Dvoxel.skyMode=procedural',
+      'Mountain summit vantage point (Y=194+) overlooking a 1,280m procedural LOD mountain relief. Continuous transition from golden-hour sunlight to directional twilight scattering with dynamic horizon dip, circular chunk culling with 8×8 Bayer screen-door dissolve, smoothstep shadow deactivation (2°–8° solar elevation), and 512 deterministic stars with lunar shadow handoff.',
+    shaderTech:
+      'SkyRenderer (Ray Reconstruction + Dynamic Horizon Dip) • DistantTerrainRenderer (1.2km Unified LOD Mesh + Valley AO) • 8×8 Bayer Dither Crossfade • CelestialState.at(worldDays)',
+    javaFlags: '-Dvoxel.startHour=6.0 -Dvoxel.timeScale=20 -Dvoxel.skyMode=procedural',
   },
     {
     id: 'cinematic_optics',
